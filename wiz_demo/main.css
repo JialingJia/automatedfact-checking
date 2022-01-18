@@ -1,0 +1,190 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+
+/* default */
+body {
+    font-family: 'Roboto',
+        'sans-serif';
+    background-color: #f2f2f2;
+}
+
+/* nav */
+
+.brand {
+    color: white;
+    font-weight: 500;
+    width: 250px;
+    padding: 10px 20px;
+    background-color: #bf5926;
+    border-top: solid 1px #bf5926;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background-color: #bf5926;
+    position: absolute;
+}
+
+.navbar {
+    background-color: #f2f2f2;
+}
+
+.navbar-start {
+    background-color: #bf5926;
+}
+
+.navbar-item-active {
+    color: #bf5926;
+    font-weight: 500;
+    border-bottom: solid 2px #bf5926;
+}
+
+a.navbar-item.navbar-item-active:hover {
+    color: #bf5926;
+    background-color: #f2f2f2;
+}
+
+.desc {
+    padding: 30px 0;
+}
+
+a.navbar-brand:hover {
+    color: white;
+    font-weight: 500;
+}
+
+a.navbar-item:hover {
+    background-color: white;
+    color: black;
+}
+
+/* content */
+
+.idea {
+    padding: 30px 0;
+}
+
+.column {
+    padding: 0 0.75rem;
+}
+
+.wiz,
+.image {
+    padding: 5px 5px;
+    border-radius: 5px;
+    border: solid 1px #cdcdcd;
+    background-color: #fff;
+    background-color: white;
+}
+
+.prototype {
+    padding: 13px 0 0 0;
+}
+
+.wiz {
+    padding: 17px 5px 22px 5px;
+}
+
+.field-content {
+    width: 85%;
+}
+
+p.instructions {
+    color: #6a6a6a;
+    font-size: 14px;
+    margin: 0.575rem 0 0.575rem 0;
+}
+
+.task {
+    color: black;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0.575rem 0 0.75rem 0;
+}
+
+.task p {
+    color: #6a6a6a;
+    font-weight: 400;
+}
+
+.example {
+    color: #6a6a6a;
+    font-size: small;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.example p {
+    padding-bottom: 6px;
+}
+
+.content ol {
+    margin-left: 1.1em;
+    margin-top: 0;
+}
+
+.help {
+    font-style: italic;
+}
+
+.footer {
+    background-color: #f2f2f2;
+}
+
+/* widget */
+
+.content-type {
+    padding-bottom: 15px;
+}
+
+.writePrompts {
+    display: flex;
+    /* margin: 10px 0; */
+    padding-bottom: 10px;
+}
+
+.writePrompts .input {
+    width: 700px;
+}
+
+.writePrompts .content {
+    padding-top: 10px;
+    padding-left: 10px;
+    font-style: italic;
+}
+
+.selectPrompts {
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.selectPrompts .content {
+    padding-top: 10px;
+    padding-left: 10px;
+    font-style: italic;
+}
+
+.existControl {
+    display: flex;
+}
+
+.existControl .content {
+    font-style: italic;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.newControl {
+    display: flex;
+}
+
+.newControl .input {
+    width: 300px;
+}
+
+.newControl .content {
+    font-style: italic;
+    padding-left: 10px;
+    padding-top: 5px;
+}

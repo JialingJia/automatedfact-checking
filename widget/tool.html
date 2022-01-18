@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="tile is-ancestor">
+            <div class="tile is-6 is-vertical is-parent">
+                <h1 class="subtitle">Input</h1>
+                <div class="tile is-child box">
+                    <!-- content input -->
+                    <div class="field is-horizontal content-input">
+                        <div class="field-label is-normal">
+                            <label class="label old-label-input">Start</label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field has-addons">
+                                <p class="control">
+                                    <span class="select">
+                                        <select id="input-select">
+                                            <option>keywords</option>
+                                            <option>sentence</option>
+                                            <option>paragraph</option>
+                                            <option>article</option>
+                                            <option>social media post</option>
+                                        </select>
+                                    </span>
+                                </p>
+                                <p class="control is-expanded" id="input-text">
+                                    <input class="input is-normal input-content" type="text" placeholder="input text">
+                                </p>
+                                <p class="control is-expanded is-hidden" id="input-area">
+                                    <textarea class="textarea input-content" placeholder="input paragraphs"></textarea>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- new input record -->
+                    <div class="field is-horizontal new-content-input is-hidden">
+                        <div class="field-label is-normal">
+                            <label class="label"> Start </label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field has-addons">
+                                <div class="field-label is-normal">
+                                    <label class="label" style="font-weight:400 ; font-style: italic; text-align: left;">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- new-content-output -->
+                    <!-- <div class="new-content-output"></div> -->
+                    <!-- content output -->
+                    <div class="field is-horizontal content-control is-hidden">
+                        <div class="field-label is-normal">
+                            <label class="label old-label-output">Control</label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field has-addons">
+                                <p class="control output-select is-hidden">
+                                    <span class="select">
+                                        <select>
+                                            <option>keywords</option>
+                                            <option>sentence</option>
+                                            <option>paragraph</option>
+                                            <option>article</option>
+                                            <option>social media post</option>
+                                        </select>
+                                    </span>
+                                </p>
+                                <p class="control is-expanded">
+                                    <input class="input is-normal output-content" type="text"
+                                        placeholder="what content">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                <!-- control button group -->
+                </div>
+                <div class="field control-button">
+                    <p class="control">
+                        <div class="dropdown is-hoverable">
+                            <div class="dropdown-trigger">
+                                <button class="button is-info" aria-haspopup="true" aria-controls="dropdown-menu3">
+                                    <span>control</span>
+                                    <span class="icon is-small">
+                                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+                                <div class="dropdown-content">
+                                    <a href="#" class="dropdown-item">
+                                        Classify
+                                    </a>
+                                    <a href="#" class="dropdown-item">
+                                        Highlight
+                                    </a>
+                                    <a href="#" class="dropdown-item">
+                                        Replace
+                                    </a>
+                                    <a href="#" class="dropdown-item">
+                                        Add
+                                    </a>
+                                    <a href="#" class="dropdown-item">
+                                        Search
+                                    </a>
+                                    <a href="#" class="dropdown-item">
+                                        Generate
+                                    </a>
+                                    <hr class="dropdown-divider">
+                                    <a href="#" class="dropdown-item">
+                                        New control
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </p>
+                </div>
+                <div class="field is-grouped confirm-button is-hidden">
+                    <p class="control">
+                        <button class="button confirm is-info is-outlined">
+                            confirm
+                        </button>
+                    </p>
+                    <p class="control">
+                        <button class="button cancel">
+                            cancel
+                        </button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="tile is-6 is-vertical is-parent">
+                <h1 class="subtitle">Output</h1>
+                <div class="tile is-child box"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script src="main.js"></script>
+
+</html>
