@@ -12,7 +12,7 @@ $('.analyze').click(function () {
   setTimeout(function () {
     analyze.removeClass('is-loading')
     analyze.closest(".columns").find(".refresh").trigger('click')
-  }, 6000)
+  }, 10000)
 
 })
 
