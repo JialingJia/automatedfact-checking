@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Co-design NLP automated fact-checking</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
-    integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -31,7 +31,7 @@
             </div>
             <div class="desc">
                 <p>Inspired by existing research papers that have applied natural language processing (NLP) to achieve
-                    automated fact-checking, we present following technical ideas. Each idea is displayed with a
+                    automated fact-checking, we present following ideas. Each idea is displayed with a
                     text-based storyboard and a wizard of oz prototype. Please read the storyboard description to
                     understand how NLP is adopted to assist fact-checking and explore prototypes to make sense of its
                     implementations followed by instructions.</p>
@@ -44,11 +44,17 @@
             <div class="idea">
                 <div class="idea-top">
                     <h4 class="title is-5">1. Detect checkable claims</h4>
-                    <p>This technical idea aims to use an existing taxonomy of claims defined by Full Fact
-                        fact-checkers to automatedly classify and detect checkable new claims.</p>
-                    <div class="image"><img src="image/detect checkable claims.png" alt=""></div>
+                    <p><b>Description:</b> this idea aims to use an existing annotation category to automatedly classify
+                        and detect checkable new claims. The category is developed by experts at Full Fact, based on
+                        their needs of checking claims by topics and routing different types of claims to the right
+                        dataset for the downstream fact-checking tasks.</p>
+                    <p><b>Objective:</b> this idea aims to lead the discussion of how to objectively determine what
+                        constitutes a claim
+                        that is checkable based on the various contexts of fact-checking organizations and how to make
+                        this technological system useful.</p>
+                    <div class="image"><img src="image/detect checkable claims.svg" alt=""></div>
                 </div>
-                <h3 class="title is-6">Wizard of oz prototype</h3>
+                <h3 class="title is-6">Prototype</h3>
                 <div class="columns">
                     <div class="column is-half">
                         <form class="wiz" name="detect-checkable-claims">
@@ -122,8 +128,8 @@
                                     <div class="field-content">
                                         <div class="prototype">
                                             <iframe id="iframe-checkable-claim"
-                                                src="https://docs.google.com/spreadsheets/d/1z9EzrgDIR11HGc7UFnRxZcqhC2xruSyXytict2eysYc/htmlembed/sheet?gid=0&range=A1:A15"
-                                                width="400px" height="330px" frameborder="0"></iframe>
+                                                src="https://docs.google.com/spreadsheets/d/1z9EzrgDIR11HGc7UFnRxZcqhC2xruSyXytict2eysYc/htmlembed/sheet?gid=0&range=A1:B15"
+                                                width="500px" height="330px" frameborder="0"></iframe>
                                             <button class="button is-small is-info refresh"
                                                 id="reload-checkable-claim">refresh</button>
                                         </div>
@@ -142,16 +148,21 @@
             <div class="idea">
                 <div class="idea-top">
                     <h4 class="title is-5">2. Detect check-worthy claims on social media</h4>
-                    <p>This technical idea aims to use different social media metrics to detect the virality and
-                        susceptibility of a tweet, including number of comments and retweets. By combining different
-                        textual features identified from tweets' comments, including sentiment, political ideology, and
-                        stances, the system helps to detect if the claim is worthy of fact-checking based on both social
-                        media metrics and textual features.</p>
+                    <p><b>Description: </b>this idea aims to use different social media metrics to detect the virality
+                        and
+                        susceptibility of a tweet based on crowd's activities, such as people's comments and retweets.
+                        By analyzing different linguistic features from tweets' comments, including sentiment, political
+                        ideology, and stances, the system helps to detect if the claim is worthy of fact-checking based
+                        on both social media metrics and linguistic features.</p>
+                    <p><b>Objective: </b>this idea aims to lead the discussion of how to define virality and
+                        susceptibility of
+                        social media posts and how to objectively quantify those social media metrics for the use of
+                        finding check-worthy claims.</p>
                     <div class="image"><img
-                            src="image/Detect check-worthy claims on social media based on virality and textual features.png"
+                            src="image/Detect check-worthy claims on social media based on virality and textual features.svg"
                             alt=""></div>
                 </div>
-                <h3 class="title is-6">Wizard of oz prototype</h3>
+                <h3 class="title is-6">Prototype</h3>
                 <div class="columns">
                     <div class="column is-half">
                         <form class="wiz" name="detect-checkworthy-claims">
@@ -244,12 +255,15 @@
             <div class="idea">
                 <div class="idea-top">
                     <h4 class="title is-5">3. Generate news article briefs for fast-reading</h4>
-                    <p>This technical idea aims to use an extractive summarization method to highlight sentences
+                    <p><b>Description: </b>this idea aims to use an extractive summarization method to highlight
+                        sentences
                         considered to be part of a summary from the original articles and compress a list of summary
                         brief for fast-reading.</p>
-                    <div class="image"><img src="image/Generate news article briefs for fast-reading.png" alt=""></div>
+                    <p><b>Objective:</b> this idea aims to lead the discussion of how to use summarization to improve
+                        fast-reading or other tasks to assist fact-checking</p>
+                    <div class="image"><img src="image/Generate news article briefs for fast-reading.svg" alt=""></div>
                 </div>
-                <h3 class="title is-6">Wizard of oz prototype</h3>
+                <h3 class="title is-6">Prototype</h3>
                 <div class="columns">
                     <div class="column is-half">
                         <form class="wiz" name="generate-article-briefs">
@@ -338,11 +352,14 @@
             <div class="idea">
                 <div class="idea-top">
                     <h4 class="title is-5">4. Robocheck simple claims by searching evidence</h4>
-                    <p>This technical idea aims to retrieve relevant articles according to a claim and automatedly
+                    <p><b>Description: </b>this idea aims to retrieve relevant articles according to a claim and
+                        automatedly
                         verify the claim based on stances of these retrieval articles.</p>
-                    <div class="image"><img src="image/Robocheck simple claims by searching evidence.png" alt=""></div>
+                    <p><b>Objective:</b> this idea aims to lead the discussion of what kinds of claims are appropriate for
+                        machine to check and how to effectively review the results from robocheck.</p>
+                    <div class="image"><img src="image/Robocheck simple claims by searching evidence.svg" alt=""></div>
                 </div>
-                <h3 class="title is-6">Wizard of oz prototype</h3>
+                <h3 class="title is-6">Prototype</h3>
                 <div class="columns">
                     <div class="column is-half">
                         <form class="wiz" name="robocheck">
@@ -436,7 +453,7 @@
             <p>This is a research prototype, only used for the workshop of co-designing NLP solutions to assist human
                 fact-checkers. Designed by Houjiang Liu. <br> This webpage is under a <a
                     href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA license</a>
-                </p>
+            </p>
         </div>
     </footer>
 
