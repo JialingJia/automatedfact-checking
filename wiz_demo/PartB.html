@@ -19,22 +19,22 @@
         <div class="container">
             <div class="navbar-menu">
                 <div class="navbar-start">
-                    <a class="navbar-brand brand" href="client.html">
+                    <a class="navbar-brand brand" href="PartA.html">
                         <p>Co-design NLP for automated fact-checking</p>
                     </a>
                 </div>
                 <div class="navbar-end">
-                    <a class="navbar-item navbar-item-active" href="client.html"><br />PART A</a>
-                    <a class="navbar-item" href=""><br />PART B</a>
+                    <a class="navbar-item" href="PartA.html"><br />PART A</a>
+                    <a class="navbar-item navbar-item-active" href="PartB.html"><br />PART B</a>
                     <a class="navbar-item" href="widget.html"><br />Toolkit</a>
                 </div>
             </div>
             <div class="desc">
-                <p>Inspired by existing research papers that have applied natural language processing (NLP) to achieve
-                    automated fact-checking, we present following ideas. Each idea is displayed with a
-                    text-based storyboard and a wizard of oz prototype. Please read the storyboard description to
-                    understand how NLP is adopted to assist fact-checking and explore prototypes to make sense of its
-                    implementations followed by instructions.</p>
+                <p>We brainstorm the following ideas using cutting-edge NLP techniques that have not been adopted in
+                    automated fact-checking. Each idea is displayed with a text-based storyboard and a wizard of oz
+                    prototype. Please read the storyboard description to understand how NLP is adopted to assist
+                    fact-checking and explore prototypes to make sense of its implementations followed by instructions.
+                </p>
             </div>
         </div>
     </section>
@@ -43,16 +43,14 @@
             <!-- detect checkable claims -->
             <div class="idea">
                 <div class="idea-top">
-                    <h4 class="title is-5">1. Detect checkable claims</h4>
-                    <p><b>Description:</b> this idea aims to use an existing annotation category to automatedly classify
-                        and detect checkable new claims. The category is developed by experts at Full Fact, based on
-                        their needs of checking claims by topics and routing different types of claims to the right
-                        dataset for the downstream fact-checking tasks.</p>
-                    <p><b>Objective:</b> this idea aims to lead the discussion of how to objectively determine what
-                        constitutes a claim
-                        that is checkable based on the various contexts of fact-checking organizations and how to make
-                        this technological system useful.</p>
-                    <div class="image"><img src="image/detect checkable claims.svg" alt=""></div>
+                    <h4 class="title is-5">1. Prepare stand-alone claims before fact-checking</h4>
+                    <p><b>Description: </b>this idea aims to create a stand-alone claim by replacing
+                        pronouns, removing discourse markers, and adding local conditions to decontextualize it from the
+                        paragraph.</p>
+                    <p><b>Objective:</b> this idea aims to understand how useful to have stand-alone claim prepared
+                        before checking claims.</p>
+                    <div class="image"><img src="image/Prepare stand-alone claims before fact-checking.svg" alt="">
+                    </div>
                 </div>
                 <h3 class="title is-6">Prototype</h3>
                 <div class="columns">
@@ -64,7 +62,8 @@
                                 </div>
                                 <div class="field-body">
                                     <div class="field-content">
-                                        <p class="instructions">Please enter paragraphs or select one example below:</p>
+                                        <p class="instructions">Please enter one paragraph or select one examples below:
+                                        </p>
                                         <textarea class="textarea is-small" placeholder="enter text"
                                             name="client's input"></textarea>
                                         <p class="instructions">Examples:</p>
@@ -95,8 +94,9 @@
                                 <div class="field-body">
                                     <div class="field-content task">
                                         <ol>
-                                            <li>Classify claims' category</li>
                                             <li>Detect checkable claims</li>
+                                            <li>Create stand-alone claims by replacing pronouns, removing discourse
+                                                markers, and adding local conditions</li>
                                         </ol>
                                     </div>
                                 </div>
@@ -127,9 +127,9 @@
                                 <div class="field-body">
                                     <div class="field-content">
                                         <div class="prototype">
-                                            <iframe id="iframe-checkable-claim"
+                                            <!-- <iframe id="iframe-checkable-claim"
                                                 src="https://docs.google.com/spreadsheets/d/1z9EzrgDIR11HGc7UFnRxZcqhC2xruSyXytict2eysYc/htmlembed/sheet?gid=0&range=A1:B15"
-                                                width="500px" height="330px" frameborder="0"></iframe>
+                                                width="500px" height="330px" frameborder="0"></iframe> -->
                                             <button class="button is-small is-info refresh"
                                                 id="reload-checkable-claim">refresh</button>
                                         </div>
@@ -147,19 +147,12 @@
             <!-- detect check-worthy claims -->
             <div class="idea">
                 <div class="idea-top">
-                    <h4 class="title is-5">2. Detect check-worthy claims on social media</h4>
-                    <p><b>Description: </b>this idea aims to use different social media metrics to detect the virality
-                        and
-                        susceptibility of a tweet based on crowd's activities, such as people's comments and retweets.
-                        By analyzing different linguistic features from tweets' comments, including sentiment, political
-                        ideology, and stances, the system helps to detect if the claim is worthy of fact-checking based
-                        on both social media metrics and linguistic features.</p>
-                    <p><b>Objective: </b>this idea aims to lead the discussion of how to define virality and
-                        susceptibility of
-                        social media posts and how to objectively quantify those social media metrics for the use of
-                        finding check-worthy claims.</p>
-                    <div class="image"><img
-                            src="image/Detect check-worthy claims on social media based on virality and textual features.svg"
+                    <h4 class="title is-5">2. Help fact-checkers investigate ambiguous terms in a claim</h4>
+                    <p><b>Description: </b>this idea aims to detect ambiguous terms in a claim and help fact-checkers
+                        generate contextual questions for further investigations based on these terms.</p>
+                    <p><b>Objective: </b>this idea aims to lead the discussion of how to objectively quantify claims'
+                        ambiguity for fact-checking, and how the detection system can be situated in the workflow of human fact-checkers.</p>
+                    <div class="image"><img src="image/Help fact-checkers investigate ambiguous terms in a claim.svg"
                             alt=""></div>
                 </div>
                 <h3 class="title is-6">Prototype</h3>
@@ -172,22 +165,21 @@
                                 </div>
                                 <div class="field-body">
                                     <div class="field-content">
-                                        <p class="instructions">Please paste one tweet URL or select one example below:
+                                        <p class="instructions">Please enter one sentence or select one examples below:
                                         </p>
                                         <textarea class="textarea is-small" placeholder="enter tweet URL"
                                             name="client's input"></textarea>
                                         <p class="instructions">Examples:</p>
                                         <a class="example">
-                                            <p>https://twitter.com/mazzenilsson/status/1459013601830842372 <br>
-                                                "Austria is expecting to declare nationwide lockdown of unvaccinated
-                                                people, in what would be the broadest restrictions that any country has
-                                                yet placed on those who have opted not to get the jab."</p>
+                                            <p>"People in the Muslim Brotherhood openly stated they want to declare war
+                                                on Israel and they would end the peace agreement with Israel and they
+                                                would work towards instituting something we told you about, a
+                                                caliphate."</p>
                                         </a>
                                         <a class="example">
-                                            <p>https://twitter.com/btc_sd/status/1460667643921408006 <br>
-                                                "Politicians around the world are denying that their actions are
-                                                devaluing the currencies. They aren't going to stop until it's far too
-                                                late. Protect yourself and buy some Bitcoin."</p>
+                                            <p>"Austria is expecting to declare nationwide lockdown of unvaccinated
+                                                people, in what would be the broadest restrictions that any country has
+                                                yet placed on those who have opted not to get the jab."</p>
                                         </a>
                                     </div>
                                 </div>
@@ -199,11 +191,8 @@
                                 <div class="field-body">
                                     <div class="field-content task">
                                         <ol>
-                                            <li>Classify sentiments, political ideology, and stances of tweet's comments
-                                            </li>
-                                            <li>Identify tweet's virality and susceptibility</li>
-                                            <li>Classify whether the tweet contains checkable claims</li>
-                                            <li>Classify whether the tweet is check-worthy</li>
+                                            <li>Highlight ambiguous terms</li>
+                                            <li>Generate contextual questions from these terms</li>
                                         </ol>
                                     </div>
                                 </div>
@@ -234,9 +223,9 @@
                                 <div class="field-body">
                                     <div class="field-content">
                                         <div class="prototype">
-                                            <iframe id="iframe-checkworthy-claim"
+                                            <!-- <iframe id="iframe-checkworthy-claim"
                                                 src="https://docs.google.com/spreadsheets/d/1z9EzrgDIR11HGc7UFnRxZcqhC2xruSyXytict2eysYc/htmlembed/sheet?gid=823408266&range=A1:A25"
-                                                width="400px" height="560px" frameborder="0"></iframe>
+                                                width="400px" height="560px" frameborder="0"></iframe> -->
                                             <button class="button is-small is-info refresh"
                                                 id="reload-checkworthy-claim">refresh</button>
                                         </div>
@@ -254,14 +243,13 @@
             <!-- generate article briefs -->
             <div class="idea">
                 <div class="idea-top">
-                    <h4 class="title is-5">3. Generate news article briefs for fast-reading</h4>
-                    <p><b>Description: </b>this idea aims to use an extractive summarization method to highlight
-                        sentences
-                        considered to be part of a summary from the original articles and compress a list of summary
-                        brief for fast-reading.</p>
-                    <p><b>Objective:</b> this idea aims to lead the discussion of how to use summarization to improve
-                        fast-reading or other tasks to assist fact-checking</p>
-                    <div class="image"><img src="image/Generate news article briefs for fast-reading.svg" alt=""></div>
+                    <h4 class="title is-5">3. Retrieve quantitative related information from analytical queries</h4>
+                    <p><b>Description: </b>this idea aims to help fact-checkers search quantitative related information
+                        including place, time, and statistics. It also generates a final answer by combining these
+                        quantitative information.</p>
+                    <p><b>Objective: </b>this idea aims to lead the discussion of how machine can help to assist
+                        fact-checkers in checking quantitative-related claims.</p>
+                    <div class="image"><img src="image/Retrieve quantitative related information.svg" alt=""></div>
                 </div>
                 <h3 class="title is-6">Prototype</h3>
                 <div class="columns">
@@ -280,15 +268,14 @@
                                             name="client's input"></textarea>
                                         <p class="instructions">Examples:</p>
                                         <a class="example">
-                                            <p>https://www.cbsnews.com/news/inflation-infrastructure-build-back-better-biden-spending-bills/
-                                                <br>
-                                                "Biden's Build Back Better Act would have muted impact on inflation,
-                                                Moody's says"</p>
+                                            <p>How many total covid cases India have reported from April 7th to April
+                                                10th</p>
                                         </a>
                                         <a class="example">
-                                            <p>https://www.nytimes.com/2021/11/15/business/dealbook/infrastructure-inflation-social-spending.html
-                                                <br>
-                                                "Inflation will make or break the next spending bill"</p>
+                                            <p>GDP of the US, EU and China in recent 5 years</p>
+                                        </a>
+                                        <a class="example">
+                                            <p>Monthly income for people living in Florida</p>
                                         </a>
                                     </div>
                                 </div>
@@ -300,7 +287,10 @@
                                 <div class="field-body">
                                     <div class="field-content task">
                                         <ol>
-                                            <li>Generate a summary brief for the article</li>
+                                            <li>Detect analytical keywords from the search query, including time, space,
+                                                and search objects</li>
+                                            <li>Retrieve quantitative relevant information</li>
+                                            <li>Generate final answers from retrieval information</li>
                                         </ol>
                                     </div>
                                 </div>
@@ -331,9 +321,9 @@
                                 <div class="field-body">
                                     <div class="field-content">
                                         <div class="prototype">
-                                            <iframe id="iframe-generate-article-briefs"
+                                            <!-- <iframe id="iframe-generate-article-briefs"
                                                 src="https://docs.google.com/spreadsheets/d/1z9EzrgDIR11HGc7UFnRxZcqhC2xruSyXytict2eysYc/htmlembed/sheet?gid=1594202430&range=A1:A10"
-                                                width="400px" height="250px" frameborder="0"></iframe>
+                                                width="400px" height="250px" frameborder="0"></iframe> -->
                                             <button class="button is-small is-info refresh"
                                                 id="reload-generate-article-briefs">refresh</button>
                                         </div>
@@ -351,13 +341,16 @@
             <!-- robocheck -->
             <div class="idea">
                 <div class="idea-top">
-                    <h4 class="title is-5">4. Robocheck simple claims by searching evidence</h4>
-                    <p><b>Description: </b>this idea aims to retrieve relevant articles according to a claim and
-                        automatedly
-                        verify the claim based on stances of these retrieval articles.</p>
-                    <p><b>Objective:</b> this idea aims to lead the discussion of what kinds of claims are appropriate for
-                        machine to check and how to effectively review the results from robocheck.</p>
-                    <div class="image"><img src="image/Robocheck simple claims by searching evidence.svg" alt=""></div>
+                    <h4 class="title is-5">4. Identify the weak premise in arguments</h4>
+                    <p><b>Description: </b>this idea aims to assist fact-checkers to identify the weak premise when
+                        reading an article. Potential weak premises contain the argument is not supported by evidence or
+                        the statement is extravagant or absolute.
+                    </p>
+                    <p><b>Objective: </b> this idea aims to lead the discussion of how machine can assist fact-checkers
+                        to review people's arguments, including what criteria fact-checkers use to review arguments and
+                        how to objectively quantify these criteria from past experience.</p>
+                    <div class="image"><img src="image/Identify the weak premise.svg" alt="">
+                    </div>
                 </div>
                 <h3 class="title is-6">Prototype</h3>
                 <div class="columns">
@@ -369,20 +362,39 @@
                                 </div>
                                 <div class="field-body">
                                     <div class="field-content">
-                                        <p class="instructions">Please enter one claim or select one example below:
+                                        <p class="instructions">Please enter one paragraph or select one examples below:
                                         </p>
                                         <textarea class="textarea is-small" placeholder="enter one claim"
                                             name="client's input"></textarea>
                                         <p class="instructions">Examples:</p>
                                         <a class="example">
-                                            <p>Tiger Woods is serving a suspension from the PGA Tour after failing a
-                                                drug test</p>
+                                            <p>The last Presidential election (2016) and most succeeding elections have
+                                                proven that elections are more about party affiliations than actual
+                                                views or the character of the individual being elected. In one of the
+                                                most extreme examples, Roy Moore was backed by the Republican Party even
+                                                though he was accused of sexual misconduct and sexual assault of minors
+                                                simply because he was a Republican. This also allows voters to be lazy,
+                                                as many will simply vote for their party without researching the values
+                                                and character of the person they are voting for.
+                                            </p>
                                         </a>
                                         <a class="example">
-                                            <p>There is a case of Ebola in Kansas City</p>
+                                            <p>Our Congress is slow an inefficient because Democrats and Republicans
+                                                are more focused on opposing one another than they are on developing
+                                                actual solutions to issues like gun control and abortion. It is the job
+                                                of elected officials to represent ALL of the people of their
+                                                district/state/country, not just the people that voted for them or agree
+                                                with them, and following the ideals of a political party does not allow
+                                                for this. Political parties force us to think in terms of black and
+                                                white, and this is both inefficient and inappropriate for issues that
+                                                affect the entire country.
+                                            </p>
                                         </a>
                                         <a class="example">
-                                            <p>A 5-year-old boy was invoiced for missing a birthday parthy</p>
+                                            <p>Many young voters do not think this way--many Americans are becoming
+                                                disenfranchised with the entire political system. This is an outdated
+                                                system, and either needs to adapt or change completely to better fit the
+                                                needs of the people.</p>
                                         </a>
                                     </div>
                                 </div>
@@ -394,9 +406,8 @@
                                 <div class="field-body">
                                     <div class="field-content task">
                                         <ol>
-                                            <li>Retrieve relevant articles</li>
-                                            <li>Verify claim based on article stances</li>
-                                            <li>highlight evidences from articles</li>
+                                            <li>Categorize different types of weak premise</li>
+                                            <li>Identify weak premise in arguments and opinions</li>
                                         </ol>
                                     </div>
                                 </div>
@@ -427,9 +438,9 @@
                                 <div class="field-body">
                                     <div class="field-content">
                                         <div class="prototype">
-                                            <iframe id="iframe-robocheck"
+                                            <!-- <iframe id="iframe-robocheck"
                                                 src="https://docs.google.com/spreadsheets/d/1z9EzrgDIR11HGc7UFnRxZcqhC2xruSyXytict2eysYc/htmlembed/sheet?gid=683514345&range=A1:B8"
-                                                width="500px" height="350px" frameborder="0"></iframe>
+                                                width="500px" height="350px" frameborder="0"></iframe> -->
                                             <button class="button is-small is-info refresh"
                                                 id="reload-robocheck">refresh</button>
                                         </div>
