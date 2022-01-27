@@ -28,10 +28,10 @@
         <path id="Path_111-2" data-name="Path 111" d="M0,11.5,12.93,0,25,11.5" transform="translate(25 11.499) rotate(180)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
       </g>
     </g>
-    <text id="How_many_total_covid_cases_India_have_reported_from_April_7th_to_April_12th_" data-name="How many total covid cases India have reported from April 7th to April 12th?" transform="translate(207 149)" font-size="24" font-family="HelveticaNowText-RegIta, Helvetica Now Text" font-style="italic"><tspan x="0" y="21">How many total covid cases India have reported </tspan><tspan x="0" y="51">from April 7th to April 12th?</tspan></text>
-    <text id="search_objective:_total_covid_cases_place:_India_time:_April_7th_to_April_12th" data-name="search objective: total covid cases
+    <text id="How_many_total_covid_cases_India_have_reported_from_April_7th_to_April_10th_" data-name="How many total covid cases India have reported from April 7th to April 10th?" transform="translate(207 149)" font-size="24" font-family="HelveticaNowText-RegIta, Helvetica Now Text" font-style="italic"><tspan x="0" y="21">How many total covid cases India have reported </tspan><tspan x="0" y="51">from April 7th to April 10th?</tspan></text>
+    <text id="search_objective:_total_covid_cases_place:_India_time:_April_7th_to_April_10th" data-name="search objective: total covid cases
 place: India
-time: April 7th to April 12th" transform="translate(1811 217)" font-size="24" font-family="HelveticaNowText-RegIta, Helvetica Now Text" font-style="italic"><tspan x="0" y="21">search objective: total covid cases</tspan><tspan x="0" y="51">place: India</tspan><tspan x="0" y="81">time: April 7th to April 12th</tspan></text>
+time: April 7th to April 10th" transform="translate(1811 217)" font-size="24" font-family="HelveticaNowText-RegIta, Helvetica Now Text" font-style="italic"><tspan x="0" y="21">search objective: total covid cases</tspan><tspan x="0" y="51">place: India</tspan><tspan x="0" y="81">time: April 7th to April 10th</tspan></text>
     <g id="Group_34" data-name="Group 34" transform="translate(-4 -4174)">
       <g id="Ellipse_37" data-name="Ellipse 37" transform="translate(140 4326)" fill="#e9e9e9" stroke="#707070" stroke-linecap="round" stroke-width="2">
         <circle cx="16" cy="16" r="16" stroke="none"/>
@@ -39,8 +39,8 @@ time: April 7th to April 12th" transform="translate(1811 217)" font-size="24" fo
       </g>
       <path id="Path_118" data-name="Path 118" d="M5094.894,10924.254l14.889,20.207" transform="translate(-4930 -6570)" fill="none" stroke="#707070" stroke-width="4"/>
     </g>
-    <text id="Keywords_for_quantitative_information:" data-name="Keywords for quantitative information:" transform="translate(1811 166.5)" font-size="24" font-family="HelveticaNowText-Bold, Helvetica Now Text" font-weight="700"><tspan x="0" y="21">Keywords for quantitative information:</tspan></text>
-    <text id="Retrieval_statistics:" data-name="Retrieval statistics:" transform="translate(1811 348.5)" font-size="24" font-family="HelveticaNowText-Bold, Helvetica Now Text" font-weight="700"><tspan x="0" y="21">Retrieval statistics:</tspan></text>
+    <text id="Analytical_keywords_from_the_search_query:" data-name="Analytical keywords from the search query:" transform="translate(1811 166.5)" font-size="24" font-family="HelveticaNowText-Bold, Helvetica Now Text" font-weight="700"><tspan x="0" y="21">Analytical keywords from the search query:</tspan></text>
+    <text id="Tabular_data:" data-name="Tabular data:" transform="translate(1811 348.5)" font-size="24" font-family="HelveticaNowText-Bold, Helvetica Now Text" font-weight="700"><tspan x="0" y="21">Tabular data:</tspan></text>
     <text id="Final_answer:" data-name="Final answer:" transform="translate(1811 738.5)" font-size="24" font-family="HelveticaNowText-Bold, Helvetica Now Text" font-weight="700"><tspan x="0" y="21">Final answer:</tspan></text>
     <g id="Rectangle_229" data-name="Rectangle 229" transform="translate(1811 399)" fill="#fff" stroke="#707070" stroke-width="1">
       <rect width="680" height="41" stroke="none"/>
@@ -80,19 +80,13 @@ time: April 7th to April 12th" transform="translate(1811 217)" font-size="24" fo
     <text id="_453454" data-name="453454" transform="translate(2121 495)" font-size="14" font-family="HelveticaNowText-Regular, Helvetica Now Text"><tspan x="0" y="12">453454</tspan></text>
     <text id="_5411221" data-name="5411221" transform="translate(2121 537)" font-size="14" font-family="HelveticaNowText-Regular, Helvetica Now Text"><tspan x="0" y="12">5411221</tspan></text>
     <text id="_456553" data-name="456553" transform="translate(2121 578)" font-size="14" font-family="HelveticaNowText-Regular, Helvetica Now Text"><tspan x="0" y="12">456553</tspan></text>
-    <text id="_453676" data-name="453676" transform="translate(2121 621)" font-size="14" font-family="HelveticaNowText-Regular, Helvetica Now Text"><tspan x="0" y="12">453676</tspan></text>
-    <text id="_5123110" data-name="5123110" transform="translate(2121 663)" font-size="14" font-family="HelveticaNowText-Regular, Helvetica Now Text"><tspan x="0" y="12">5123110</tspan></text>
     <text id="April_7th" data-name="April 7th" transform="translate(1977 452)" font-size="14" font-family="HelveticaNowText-Regular, Helvetica Now Text"><tspan x="0" y="12">April 7</tspan><tspan y="12" font-size="8.166" baseline-shift="4.666199819518059">th</tspan></text>
     <text id="April_8th" data-name="April 8th" transform="translate(1977 495)" font-size="14" font-family="HelveticaNowText-Regular, Helvetica Now Text"><tspan x="0" y="12">April 8</tspan><tspan y="12" font-size="8.166" baseline-shift="4.666199819518059">th</tspan></text>
     <text id="April_9th" data-name="April 9th" transform="translate(1977 537)" font-size="14" font-family="HelveticaNowText-Regular, Helvetica Now Text"><tspan x="0" y="12">April 9</tspan><tspan y="12" font-size="8.166" baseline-shift="4.666199819518059">th</tspan></text>
     <text id="April_10th" data-name="April 10th" transform="translate(1977 578)" font-size="14" font-family="HelveticaNowText-Regular, Helvetica Now Text"><tspan x="0" y="12">April 10</tspan><tspan y="12" font-size="8.166" baseline-shift="4.666199819518059">th</tspan></text>
-    <text id="April_11th" data-name="April 11th" transform="translate(1977 621)" font-size="14" font-family="HelveticaNowText-Regular, Helvetica Now Text"><tspan x="0" y="12">April 11</tspan><tspan y="12" font-size="8.166" baseline-shift="4.666199819518059">th</tspan></text>
-    <text id="April_12th" data-name="April 12th" transform="translate(1977 663)" font-size="14" font-family="HelveticaNowText-Regular, Helvetica Now Text"><tspan x="0" y="12">April 12</tspan><tspan y="12" font-size="8.166" baseline-shift="4.666199819518059">th</tspan></text>
     <text id="India-2" data-name="India" transform="translate(1831 495)" font-size="14" font-family="HelveticaNowText-Regular, Helvetica Now Text"><tspan x="0" y="12">India</tspan></text>
     <text id="India-3" data-name="India" transform="translate(1831 537)" font-size="14" font-family="HelveticaNowText-Regular, Helvetica Now Text"><tspan x="0" y="12">India</tspan></text>
     <text id="India-4" data-name="India" transform="translate(1831 578)" font-size="14" font-family="HelveticaNowText-Regular, Helvetica Now Text"><tspan x="0" y="12">India</tspan></text>
-    <text id="India-5" data-name="India" transform="translate(1831 621)" font-size="14" font-family="HelveticaNowText-Regular, Helvetica Now Text"><tspan x="0" y="12">India</tspan></text>
-    <text id="India-6" data-name="India" transform="translate(1831 663)" font-size="14" font-family="HelveticaNowText-Regular, Helvetica Now Text"><tspan x="0" y="12">India</tspan></text>
     <text id="Date" transform="translate(1977 412)" font-size="14" font-family="HelveticaNowText-Bold, Helvetica Now Text" font-weight="700"><tspan x="0" y="12">Date</tspan></text>
     <text id="Covid_cases" data-name="Covid cases" transform="translate(2121 412)" font-size="14" font-family="HelveticaNowText-Bold, Helvetica Now Text" font-weight="700"><tspan x="0" y="12">Covid cases</tspan></text>
     <path id="Path_139" data-name="Path 139" d="M-963.446,15431v253" transform="translate(2921 -14992)" fill="none" stroke="#707070" stroke-width="1"/>
