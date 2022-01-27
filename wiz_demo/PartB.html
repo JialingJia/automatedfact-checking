@@ -40,7 +40,7 @@
     </section>
     <section class="container">
         <div class="content">
-            <!-- detect checkable claims -->
+            <!-- prepare stand-alone claims -->
             <div class="idea">
                 <div class="idea-top">
                     <h4 class="title is-5">1. Prepare stand-alone claims before fact-checking</h4>
@@ -55,7 +55,7 @@
                 <h3 class="title is-6">Prototype</h3>
                 <div class="columns">
                     <div class="column is-half">
-                        <form class="wiz" name="detect-checkable-claims">
+                        <form class="wiz" name="prepare-stand-alone-claims">
                             <div class="field is-horizontal">
                                 <div class="field-label is-normal">
                                     <label class="label">Input</label>
@@ -70,7 +70,7 @@
                                         <a class="example">
                                             <p>"We told you this week how if Mubarak does step down,
                                                 however, the Muslim
-                                                Brotherhood would be the most likely group to seize power. They’ve
+                                                Brotherhood would be the most likely group to seize power. They've
                                                 openly
                                                 stated they want to declare war on Israel and they would end the peace
                                                 agreement with Israel and they would work towards instituting something
@@ -127,11 +127,11 @@
                                 <div class="field-body">
                                     <div class="field-content">
                                         <div class="prototype">
-                                            <!-- <iframe id="iframe-checkable-claim"
-                                                src="https://docs.google.com/spreadsheets/d/1z9EzrgDIR11HGc7UFnRxZcqhC2xruSyXytict2eysYc/htmlembed/sheet?gid=0&range=A1:B15"
-                                                width="500px" height="330px" frameborder="0"></iframe> -->
+                                            <iframe id="iframe-stand-alone-claims"
+                                                src="https://docs.google.com/spreadsheets/d/1z9EzrgDIR11HGc7UFnRxZcqhC2xruSyXytict2eysYc/htmlembed/sheet?gid=908623667&range=A1:A10"
+                                                width="500px" height="330px" frameborder="0"></iframe>
                                             <button class="button is-small is-info refresh"
-                                                id="reload-checkable-claim">refresh</button>
+                                                id="reload-stand-alone-claims">refresh</button>
                                         </div>
 
                                         <!-- <iframe src="https://onedrive.live.com/embed?cid=BBC45CB5BFB6794E&amp;resid=BBC45CB5BFB6794E%21205936&amp;authkey=APB0OWKHPgHOOt8&amp;em=2" width="476px" height="288px" frameborder="0"></iframe> -->
@@ -144,42 +144,44 @@
                     </div>
                 </div>
             </div>
-            <!-- detect check-worthy claims -->
+            <!-- ambiguous terms -->
             <div class="idea">
                 <div class="idea-top">
                     <h4 class="title is-5">2. Help fact-checkers investigate ambiguous terms in a claim</h4>
-                    <p><b>Description: </b>this idea aims to detect ambiguous terms in a claim and help fact-checkers
+                    <p><b>Description:</b> this idea aims to detect ambiguous terms in a claim and help fact-checkers
                         generate contextual questions for further investigations based on these terms.</p>
-                    <p><b>Objective: </b>this idea aims to lead the discussion of how to objectively quantify claims'
-                        ambiguity for fact-checking, and how the detection system can be situated in the workflow of human fact-checkers.</p>
+                    <p><b>Objective:</b> this idea aims to lead the discussion of how to objectively quantify claims'
+                        ambiguity for fact-checking, including finding ambiguous terms or analyzing a complex claim.</p>
                     <div class="image"><img src="image/Help fact-checkers investigate ambiguous terms in a claim.svg"
                             alt=""></div>
                 </div>
                 <h3 class="title is-6">Prototype</h3>
                 <div class="columns">
                     <div class="column is-half">
-                        <form class="wiz" name="detect-checkworthy-claims">
+                        <form class="wiz" name="ambiguous-terms">
                             <div class="field is-horizontal">
                                 <div class="field-label is-normal">
                                     <label class="label">Input</label>
                                 </div>
                                 <div class="field-body">
                                     <div class="field-content">
-                                        <p class="instructions">Please enter one sentence or select one examples below:
-                                        </p>
-                                        <textarea class="textarea is-small" placeholder="enter tweet URL"
+                                        <p class="instructions">Please enter paragraphs or select one example below:</p>
+                                        <textarea class="textarea is-small" placeholder="enter text"
                                             name="client's input"></textarea>
                                         <p class="instructions">Examples:</p>
                                         <a class="example">
                                             <p>"People in the Muslim Brotherhood openly stated they want to declare war
                                                 on Israel and they would end the peace agreement with Israel and they
                                                 would work towards instituting something we told you about, a
-                                                caliphate."</p>
+                                                caliphate."
+                                            </p>
                                         </a>
                                         <a class="example">
-                                            <p>"Austria is expecting to declare nationwide lockdown of unvaccinated
-                                                people, in what would be the broadest restrictions that any country has
-                                                yet placed on those who have opted not to get the jab."</p>
+                                            <p>"Austria is expecting to declare nationwide lockdown of
+                                                unvaccinated people,
+                                                in what would be the broadest restrictions that any country has yet
+                                                placed
+                                                on those who have opted not to get the jab."</p>
                                         </a>
                                     </div>
                                 </div>
@@ -223,11 +225,11 @@
                                 <div class="field-body">
                                     <div class="field-content">
                                         <div class="prototype">
-                                            <!-- <iframe id="iframe-checkworthy-claim"
-                                                src="https://docs.google.com/spreadsheets/d/1z9EzrgDIR11HGc7UFnRxZcqhC2xruSyXytict2eysYc/htmlembed/sheet?gid=823408266&range=A1:A25"
-                                                width="400px" height="560px" frameborder="0"></iframe> -->
+                                            <iframe id="iframe-ambiguous-terms"
+                                                src="https://docs.google.com/spreadsheets/d/1z9EzrgDIR11HGc7UFnRxZcqhC2xruSyXytict2eysYc/htmlembed/sheet?gid=329672307&range=A1:A10"
+                                                width="500px" height="330px" frameborder="0"></iframe>
                                             <button class="button is-small is-info refresh"
-                                                id="reload-checkworthy-claim">refresh</button>
+                                                id="reload-ambiguous-terms">refresh</button>
                                         </div>
 
                                         <!-- <iframe src="https://onedrive.live.com/embed?cid=BBC45CB5BFB6794E&amp;resid=BBC45CB5BFB6794E%21205936&amp;authkey=APB0OWKHPgHOOt8&amp;em=2" width="476px" height="288px" frameborder="0"></iframe> -->
@@ -240,39 +242,35 @@
                     </div>
                 </div>
             </div>
-            <!-- generate article briefs -->
+            <!-- retrieve quantitative information -->
             <div class="idea">
                 <div class="idea-top">
                     <h4 class="title is-5">3. Retrieve quantitative related information from analytical queries</h4>
-                    <p><b>Description: </b>this idea aims to help fact-checkers search quantitative related information
-                        including place, time, and statistics. It also generates a final answer by combining these
-                        quantitative information.</p>
-                    <p><b>Objective: </b>this idea aims to lead the discussion of how machine can help to assist
-                        fact-checkers in checking quantitative-related claims.</p>
+                    <p><b>Description:</b> this idea aims to help fact-checkers search quantitative related information including place, time, and statistics. It also generates a final answer by combining these quantitative information.</p>
+                    <p><b>Objective:</b> this idea aims to lead the discussion of how machine can help to assist fact-checkers in checking quantitative-related claims.</p>
                     <div class="image"><img src="image/Retrieve quantitative related information.svg" alt=""></div>
                 </div>
                 <h3 class="title is-6">Prototype</h3>
                 <div class="columns">
                     <div class="column is-half">
-                        <form class="wiz" name="generate-article-briefs">
+                        <form class="wiz" name="quantitative-information">
                             <div class="field is-horizontal">
                                 <div class="field-label is-normal">
                                     <label class="label">Input</label>
                                 </div>
                                 <div class="field-body">
                                     <div class="field-content">
-                                        <p class="instructions">Please paste one article URL or select one example
-                                            below:
-                                        </p>
-                                        <textarea class="textarea is-small" placeholder="enter article URL"
+                                        <p class="instructions">Please enter a sentence that contains analytical
+                                            keywords such as space and time, or select one example below:</p>
+                                        <textarea class="textarea is-small" placeholder="enter text"
                                             name="client's input"></textarea>
                                         <p class="instructions">Examples:</p>
                                         <a class="example">
                                             <p>How many total covid cases India have reported from April 7th to April
-                                                10th</p>
+                                                9th</p>
                                         </a>
                                         <a class="example">
-                                            <p>GDP of the US, EU and China in recent 5 years</p>
+                                            <p>GDP of China in recent 3 years</p>
                                         </a>
                                         <a class="example">
                                             <p>Monthly income for people living in Florida</p>
@@ -287,8 +285,7 @@
                                 <div class="field-body">
                                     <div class="field-content task">
                                         <ol>
-                                            <li>Detect analytical keywords from the search query, including time, space,
-                                                and search objects</li>
+                                            <li>Detect analytical keywords from the search query, including time, space, and search objects</li>
                                             <li>Retrieve quantitative relevant information</li>
                                             <li>Generate final answers from retrieval information</li>
                                         </ol>
@@ -321,11 +318,11 @@
                                 <div class="field-body">
                                     <div class="field-content">
                                         <div class="prototype">
-                                            <!-- <iframe id="iframe-generate-article-briefs"
-                                                src="https://docs.google.com/spreadsheets/d/1z9EzrgDIR11HGc7UFnRxZcqhC2xruSyXytict2eysYc/htmlembed/sheet?gid=1594202430&range=A1:A10"
-                                                width="400px" height="250px" frameborder="0"></iframe> -->
+                                            <iframe id="iframe-quantitative-information"
+                                                src="https://docs.google.com/spreadsheets/d/1z9EzrgDIR11HGc7UFnRxZcqhC2xruSyXytict2eysYc/htmlembed/sheet?gid=1730654240&range=A1:C10"
+                                                width="500px" height="330px" frameborder="0"></iframe>
                                             <button class="button is-small is-info refresh"
-                                                id="reload-generate-article-briefs">refresh</button>
+                                                id="reload-quantitative-information">refresh</button>
                                         </div>
 
                                         <!-- <iframe src="https://onedrive.live.com/embed?cid=BBC45CB5BFB6794E&amp;resid=BBC45CB5BFB6794E%21205936&amp;authkey=APB0OWKHPgHOOt8&amp;em=2" width="476px" height="288px" frameborder="0"></iframe> -->
@@ -338,63 +335,33 @@
                     </div>
                 </div>
             </div>
-            <!-- robocheck -->
+            <!-- review argumentation -->
             <div class="idea">
                 <div class="idea-top">
-                    <h4 class="title is-5">4. Identify the weak premise in arguments</h4>
-                    <p><b>Description: </b>this idea aims to assist fact-checkers to identify the weak premise when
-                        reading an article. Potential weak premises contain the argument is not supported by evidence or
-                        the statement is extravagant or absolute.
-                    </p>
-                    <p><b>Objective: </b> this idea aims to lead the discussion of how machine can assist fact-checkers
-                        to review people's arguments, including what criteria fact-checkers use to review arguments and
-                        how to objectively quantify these criteria from past experience.</p>
-                    <div class="image"><img src="image/Identify the weak premise.svg" alt="">
-                    </div>
+                    <h4 class="title is-5">4. Review argumentation in the fact-checking report</h4>
+                    <p><b>Description:</b> this idea aims to assist fact-checkers to evaluate the argumentation in a fact-checking report from three perspectives, including readability, coherency, and persuasiveness.</p>
+                    <p><b>Objective:</b> this idea aims to lead the discussion of how machine can assist fact-checkers to review their reports, not only about the argumentations, but also other criteria that fact-checkers can objectively quantify from their writing experience.</p>
+                    <div class="image"><img src="image/Review argumentations in a fact-checking report.svg" alt=""></div>
                 </div>
                 <h3 class="title is-6">Prototype</h3>
                 <div class="columns">
                     <div class="column is-half">
-                        <form class="wiz" name="robocheck">
+                        <form class="wiz" name="review-argumentation">
                             <div class="field is-horizontal">
                                 <div class="field-label is-normal">
                                     <label class="label">Input</label>
                                 </div>
                                 <div class="field-body">
                                     <div class="field-content">
-                                        <p class="instructions">Please enter one paragraph or select one examples below:
-                                        </p>
-                                        <textarea class="textarea is-small" placeholder="enter one claim"
+                                        <p class="instructions">Please enter one paragraph or select one from the fact-check below:</p>
+                                        <textarea class="textarea is-small" placeholder="enter text"
                                             name="client's input"></textarea>
-                                        <p class="instructions">Examples:</p>
+                                        <p class="instructions">Example:</p>
+                                        <p class="example" style="color: black;">Claim: The push for high-speed internet for rural areas, from the start, “was a Democratic thing.”</p>
                                         <a class="example">
-                                            <p>The last Presidential election (2016) and most succeeding elections have
-                                                proven that elections are more about party affiliations than actual
-                                                views or the character of the individual being elected. In one of the
-                                                most extreme examples, Roy Moore was backed by the Republican Party even
-                                                though he was accused of sexual misconduct and sexual assault of minors
-                                                simply because he was a Republican. This also allows voters to be lazy,
-                                                as many will simply vote for their party without researching the values
-                                                and character of the person they are voting for.
-                                            </p>
-                                        </a>
-                                        <a class="example">
-                                            <p>Our Congress is slow an inefficient because Democrats and Republicans
-                                                are more focused on opposing one another than they are on developing
-                                                actual solutions to issues like gun control and abortion. It is the job
-                                                of elected officials to represent ALL of the people of their
-                                                district/state/country, not just the people that voted for them or agree
-                                                with them, and following the ideals of a political party does not allow
-                                                for this. Political parties force us to think in terms of black and
-                                                white, and this is both inefficient and inappropriate for issues that
-                                                affect the entire country.
-                                            </p>
-                                        </a>
-                                        <a class="example">
-                                            <p>Many young voters do not think this way--many Americans are becoming
-                                                disenfranchised with the entire political system. This is an outdated
-                                                system, and either needs to adapt or change completely to better fit the
-                                                needs of the people.</p>
+                                            <p>Wisconsin Democrats did prioritize boosting rural broadband early on — particularly during the Obama administration, when then-Gov. Jim Doyle assigned nearly $23 million in federal funds to fix problems. <br>
+                                            Under Gov. Scott Walker, who took control in 2011, Republicans sent that money back to the federal government, saying it had too many strings attached. <br>
+                                            Wisconsin Republicans say they took an early aim at the issue by advocating to remove the sales tax on internet access, which could ease the burden on small internet service providers. </p>
                                         </a>
                                     </div>
                                 </div>
@@ -406,8 +373,8 @@
                                 <div class="field-body">
                                     <div class="field-content task">
                                         <ol>
-                                            <li>Categorize different types of weak premise</li>
-                                            <li>Identify weak premise in arguments and opinions</li>
+                                            <li>Highlight claims and premises</li>
+                                            <li>Score readability, coherency, and persuasiveness</li>
                                         </ol>
                                     </div>
                                 </div>
@@ -438,11 +405,11 @@
                                 <div class="field-body">
                                     <div class="field-content">
                                         <div class="prototype">
-                                            <!-- <iframe id="iframe-robocheck"
-                                                src="https://docs.google.com/spreadsheets/d/1z9EzrgDIR11HGc7UFnRxZcqhC2xruSyXytict2eysYc/htmlembed/sheet?gid=683514345&range=A1:B8"
-                                                width="500px" height="350px" frameborder="0"></iframe> -->
+                                            <iframe id="iframe-review-argumentation"
+                                                src="https://docs.google.com/spreadsheets/d/1z9EzrgDIR11HGc7UFnRxZcqhC2xruSyXytict2eysYc/htmlembed/sheet?gid=1852770638&range=A1:B8"
+                                                width="520px" height="330px" frameborder="0"></iframe>
                                             <button class="button is-small is-info refresh"
-                                                id="reload-robocheck">refresh</button>
+                                                id="reload-review-argumentation">refresh</button>
                                         </div>
 
                                         <!-- <iframe src="https://onedrive.live.com/embed?cid=BBC45CB5BFB6794E&amp;resid=BBC45CB5BFB6794E%21205936&amp;authkey=APB0OWKHPgHOOt8&amp;em=2" width="476px" height="288px" frameborder="0"></iframe> -->
@@ -455,7 +422,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -470,6 +436,6 @@
 
 </body>
 
-<script src="main.js"></script>
+<script src="PartB.js"></script>
 
 </html>
