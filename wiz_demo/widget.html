@@ -43,7 +43,7 @@
             <!-- co-design widget -->
             <div class="idea">
                 <div class="idea-top">
-                    <h4 class="title is-6">Prompts for designing new technical ideas</h4>
+                    <h4 class="title is-6">Prompts for designing new NLP solutions</h4>
                     <p>We collect a list of challenges in human fact-checking as design prompts. Please select one of
                         them or write a new one for brainstorming.</p>
                     <div class="selectPrompts">
@@ -54,7 +54,7 @@
                                 <option>Generate briefs to assist fact-checking</option>
                                 <option>Robocheck simple claims</option>
                                 <option>Decontextualize claims</option>
-                                <option>Investigate claim's ambiguity/option>
+                                <option>Investigate claim's ambiguity</option>
                                 <option>Fast-check quantitative claims</option>
                                 <option>Evaluate fact-check report</option>
                                 <option>Know the harm of believing a false claim</option>
@@ -73,11 +73,12 @@
                                     organizations are treated as authoritative sources</option>
                             </select>
                         </div>
-                        <p class="content is-small"><a>write new prompts</a></p>
+                        <p class="content is-small"><a>write new prompt</a></p>
                     </div>
                     <div class="writePrompts is-hidden">
-                        <input class="input" type="text" placeholder="write down new design prompts">
-                        <p class="content is-small"><a>select design prompts</a></p>
+                        <input class="input newPrompt" type="text" placeholder="write down new design prompts">
+                        <p class="content is-small confirmNewPrompt"><a>confirm</a></p>
+                        <p class="content is-small selectDesignPrompt"><a>cancel</a></p>
                     </div>
                 </div>
                 <h3 class="title is-6">Prototype</h3>
@@ -90,44 +91,60 @@
                                 </div>
                                 <div class="field-body">
                                     <div class="field-content">
-                                        <p class="instructions">Please select one type of text and enter texts that you
-                                            are going to process with NLP techniques:</p>
+                                        <p class="instructions">To address the above challenge using NLP, please decide
+                                            what types of content information you want to start with. Select one type of
+                                            text formats and describe your content details:
+                                        </p>
                                         <div class="content-type">
                                             <div class="select is-small">
                                                 <select>
+                                                    <option>keywords</option>
                                                     <option>sentence</option>
+                                                    <option>paragraphs</option>
+                                                    <option>article</option>
+                                                    <option>social media content</option>
+                                                    <option>other</option>
                                                 </select>
                                             </div>
                                         </div>
-                                        <textarea class="textarea is-small" placeholder="enter text"
+                                        <textarea class="textarea is-small"
+                                            placeholder="I would like to start from analyzing keywords such as...."
                                             name="client's input"></textarea>
                                     </div>
                                 </div>
                             </div>
                             <div class="field is-horizontal incomplete">
                                 <div class="field-label is-normal">
-                                    <label class="label">NLP tasks</label>
+                                    <label class="label">Design</label>
                                 </div>
                                 <div class="field-body">
+                                    <div class="line is-hidden"></div>
                                     <div class="field-content task">
-                                        <p>Please select one existing NLP technique that you want
-                                            to process for the input text or define a new technique as you wish:</p>
+                                        <p>Please select one existing NLP control that you want
+                                            to process for the input text information or define a new one as you wish:</p>
                                         <div class="existControl content-type">
                                             <div class="select is-small">
                                                 <select>
-                                                    <option>Classify</option>
-                                                    <option>Generate</option>
+                                                    <option>classify</option>
+                                                    <option>generate</option>
+                                                    <option>add</option>
+                                                    <option>replace</option>
+                                                    <option>search for</option>
+                                                    <option>identify/extract</option>
+                                                    <option>rank</option>
                                                 </select>
                                             </div>
-                                            <p class="content is-small"><a>create new control</a></p>
+                                            <p class="content is-small"><a>create new</a></p>
                                         </div>
                                         <div class="newControl content-type is-hidden">
-                                            <input class="input is-small" type="text" placeholder="enter new control">
-                                            <p class="content is-small"><a>select existing control</a></p>
+                                            <input class="input is-small" type="text" placeholder="please describe your new control">
+                                            <p class="content is-small createNewOption"><a>confirm</a></p>
+                                            <p class="content is-small option"><a>cancel</a></p>
                                         </div>
 
-                                        <p>Please describe estimated outputs based on the selected technique:</p>
-                                        <input class="input is-small" type="text" placeholder="enter text">
+                                        <p>Please describe your estimated outputs based on the selected control:</p>
+                                        <input class="input is-small" type="text" placeholder="description"
+                                            id="newTaskContent">
                                     </div>
                                 </div>
                             </div>
@@ -144,71 +161,51 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="field is-horizontal complete is-hidden">
-                                <div class="field-label is-normal">
-                                    <label class="label">NLP tasks</label>
-                                </div>
-                                <div class="field-body">
-                                    <div class="field-content task">
-                                        <p>You have created following NLP tasks. If you do not want to add more NLP
-                                            tasks, please click analyze to process:</p>
-                                        <ol>
-                                            <li>Classify claims' category</li>
-                                            <li>Detect checkable claims</li>
-                                        </ol>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="field is-horizontal is-hidden">
-                                <div class="field-label is-normal">
-                                </div>
-                                <div class="field-body">
-                                    <div class="field-content">
-                                        <div class="control">
-                                            <button class="button is-info analyze" type="button">
-                                                Analyze
-                                            </button>
-                                            <p class="help">Please click refresh if there is no output</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="field is-horizontal addition is-hidden">
-                                <div class="field-label is-normal"></div>
-                                <div class="field-body">
-                                    <div class="field-content task">
-                                        <p>If you want to add more NLP tasks or reset your tasks, please choose:</p>
-                                        <p><a class="addNewControl"><i class="fas fa-plus-circle"></i> add new
-                                                controls</a></p>
-                                        <p><a class="resetTask"><i class="fas fa-redo-alt"></i> reset tasks</a></p>
-                                    </div>
-                                </div>
-                            </div>
 
                         </form>
                     </div>
                     <div class="column is-half">
                         <div class="wiz">
-                            <div class="field is-horizontal">
+                            <div class="field is-horizontal complete">
                                 <div class="field-label is-normal">
-                                    <label class="label">Output</label>
+                                    <label class="label">NLP tasks</label>
                                 </div>
                                 <div class="field-body">
-                                    <div class="field-content">
-                                        <!-- <div class="prototype">
-                                            <iframe id="iframe-checkable-claim"
-                                                src="https://docs.google.com/spreadsheets/d/1z9EzrgDIR11HGc7UFnRxZcqhC2xruSyXytict2eysYc/htmlembed/sheet?gid=0&range=A1:A15"
-                                                width="400px" height="330px" frameborder="0"></iframe>
-                                            <button class="button is-small is-info refresh"
-                                                id="reload-checkable-claim">refresh</button>
-                                        </div> -->
-
-                                        <!-- <iframe src="https://onedrive.live.com/embed?cid=BBC45CB5BFB6794E&amp;resid=BBC45CB5BFB6794E%21205936&amp;authkey=APB0OWKHPgHOOt8&amp;em=2" width="476px" height="288px" frameborder="0"></iframe> -->
-
+                                    <div class="field-content task" id="existTask">
+                                        <p> To <i id="designPrompts">detect checkable claims</i> 
+                                            you start analyzing
+                                            <i id='inputContentType'>XXX</i>
+                                            <i id='inputContent'></i> by using following NLP to:
+                                        </p>
+                                        <ol>
+                                        </ol>
                                     </div>
                                 </div>
                             </div>
-
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content">
+                                        <div class="control">
+                                            <button class="button is-info is-small" type="button">
+                                                Submit ideas
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field is-horizontal addition">
+                                <div class="field-label is-normal"></div>
+                                <div class="field-body">
+                                    <div class="field-content task">
+                                        <!-- <p>If you want to add more NLP tasks or reset your tasks, please choose:</p>
+                                        <p><a class="addNewControl"><i class="fas fa-plus-circle"></i> add new
+                                                controls</a></p> -->
+                                        <p><a class="resetTask"><i class="fas fa-redo-alt"></i> reset tasks</a></p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -29,6 +29,13 @@ b {
     position: absolute;
 }
 
+.incomplete .line {
+    width: 440px;
+    height: 1px;
+    background-color: #d1d1d1;
+    position: absolute;
+}
+
 .navbar {
     background-color: #f2f2f2;
 }
