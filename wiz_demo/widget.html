@@ -44,8 +44,8 @@
             <div class="idea">
                 <div class="idea-top">
                     <h4 class="title is-6">Prompts for designing new NLP solutions</h4>
-                    <p>We collect a list of challenges in human fact-checking as design prompts. Please select one of
-                        them or write a new one for brainstorming.</p>
+                    <p>We collect a list of challenges in human fact-checking as design prompts. <b>Please describe in
+                            detail how you want to approach it and use different NLP controls creatively.</b></p>
                     <div class="selectPrompts">
                         <div class="select is-normal">
                             <select>
@@ -69,7 +69,7 @@
                                 <option>Want ClaimReview to support different languages across different online
                                     platforms</option>
                                 <option>Understand how ClaimReview contributes to search results ranking</option>
-                                <option>Understand what criteria that Google is using to pick which fact-checking
+                                <option>Understand what criteria Google is using to pick which fact-checking
                                     organizations are treated as authoritative sources</option>
                             </select>
                         </div>
@@ -121,7 +121,8 @@
                                     <div class="line is-hidden"></div>
                                     <div class="field-content task">
                                         <p>Please select one existing NLP control that you want
-                                            to process for the input text information or define a new one as you wish:</p>
+                                            to process for the input text information or define a new one as you wish:
+                                        </p>
                                         <div class="existControl content-type">
                                             <div class="select is-small">
                                                 <select>
@@ -137,7 +138,8 @@
                                             <p class="content is-small"><a>create new</a></p>
                                         </div>
                                         <div class="newControl content-type is-hidden">
-                                            <input class="input is-small" type="text" placeholder="please describe your new control">
+                                            <input class="input is-small" type="text"
+                                                placeholder="please describe your new control">
                                             <p class="content is-small createNewOption"><a>confirm</a></p>
                                             <p class="content is-small option"><a>cancel</a></p>
                                         </div>
@@ -172,12 +174,17 @@
                                 </div>
                                 <div class="field-body">
                                     <div class="field-content task" id="existTask">
-                                        <p> To <i id="designPrompts">detect checkable claims</i> 
-                                            you start analyzing
-                                            <i id='inputContentType'>XXX</i>
-                                            <i id='inputContent'></i> by using following NLP to:
+                                        <p> You start analyzing 
+                                            <b id='inputContentType'>paragraphs</b>
+                                            <b id='inputContent'>from speech transcripts</b>
+                                            to 
+                                            <b id="designPrompts"> detect checkable claims </b>
+                                            by using following NLP to:
                                         </p>
                                         <ol>
+                                            <li>Identify/extract claims</li>
+                                            <li>Detect whether it is checkable</li>
+                                            <li>Classify the claim by topics</li>
                                         </ol>
                                     </div>
                                 </div>

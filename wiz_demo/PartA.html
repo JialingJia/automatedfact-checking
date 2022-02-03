@@ -47,9 +47,6 @@
                         and detect checkable new claims. The category is developed by experts at Full Fact, based on
                         their needs of checking claims by topics and routing different types of claims to the right
                         dataset for the downstream fact-checking tasks. </p>
-                    <p><b>Objective:</b> this idea aims to lead the discussion of how to objectively determine
-                        "checkable" claims based on different claim-selection criteria across fact-checking
-                        organizations.</p>
                     <div class="image"><img src="image/detect checkable claims.svg" alt=""></div>
                 </div>
                 <h3 class="title is-6">Prototype</h3>
@@ -63,7 +60,8 @@
                                 <div class="field-body">
                                     <div class="field-content">
                                         <p class="instructions">I would like to find checkable claims from:</p>
-                                        <textarea class="textarea is-small" placeholder="Please enter paragraphs or select one example below"
+                                        <textarea class="textarea is-small"
+                                            placeholder="Please enter paragraphs or select one example below"
                                             name="client's input"></textarea>
                                         <p class="instructions">Examples:</p>
                                         <a class="example">
@@ -108,7 +106,6 @@
                                             <button class="button analyze" type="submit">
                                                 Analyze
                                             </button>
-                                            <p class="help">Please click refresh if there is no output</p>
                                         </div>
                                     </div>
                                 </div>
@@ -130,6 +127,7 @@
                                                 width="500px" height="330px" frameborder="0"></iframe>
                                             <button class="button is-small is-info refresh"
                                                 id="reload-checkable-claim">refresh</button>
+                                            <p class="help">Please click refresh if there is no output</p>
                                         </div>
 
                                         <!-- <iframe src="https://onedrive.live.com/embed?cid=BBC45CB5BFB6794E&amp;resid=BBC45CB5BFB6794E%21205936&amp;authkey=APB0OWKHPgHOOt8&amp;em=2" width="476px" height="288px" frameborder="0"></iframe> -->
@@ -153,9 +151,6 @@
                         fact-checking. The check-worthy result combine effects from both social media metrics and
                         linguistic features.
                     </p>
-                    <p><b>Objective: </b>this idea aims to lead the discussion of how to define virality and
-                        susceptibility of social media posts, how to objectively quantify those social media metrics,
-                        and how to combine linguistic features to find check-worthy claims.</p>
                     <div class="image"><img
                             src="image/Detect check-worthy claims on social media based on virality and textual features.svg"
                             alt=""></div>
@@ -170,16 +165,17 @@
                                 </div>
                                 <div class="field-body">
                                     <div class="field-content">
-                                        <p class="instructions">I would like to detect if the following tweet is checkworthy:
+                                        <p class="instructions">I would like to detect if the following tweet is
+                                            checkworthy:
                                         </p>
-                                        <textarea class="textarea is-small" placeholder="Please paste one tweet URL or select one example below"
+                                        <textarea class="textarea is-small"
+                                            placeholder="Please paste one tweet URL or select one example below"
                                             name="client's input"></textarea>
                                         <p class="instructions">Examples:</p>
                                         <a class="example">
-                                            <p>https://twitter.com/mazzenilsson/status/1459013601830842372 <br>
-                                                "Austria is expecting to declare nationwide lockdown of unvaccinated
-                                                people, in what would be the broadest restrictions that any country has
-                                                yet placed on those who have opted not to get the jab."</p>
+                                            <p>https://twitter.com/btc_sd/status/1460667643921408006 <br>
+                                                "No economist out there is projecting that this (injecting another
+                                                $1.75T) will have a negative impact on inflation."</p>
                                         </a>
                                         <a class="example">
                                             <p>https://twitter.com/btc_sd/status/1460667643921408006 <br>
@@ -215,7 +211,6 @@
                                             <button class="button analyze" type="submit">
                                                 Analyze
                                             </button>
-                                            <p class="help">Please click refresh if there is no output</p>
                                         </div>
                                     </div>
                                 </div>
@@ -233,10 +228,11 @@
                                     <div class="field-content">
                                         <div class="prototype">
                                             <iframe id="iframe-checkworthy-claim"
-                                                src="https://docs.google.com/spreadsheets/d/1z9EzrgDIR11HGc7UFnRxZcqhC2xruSyXytict2eysYc/htmlembed/sheet?gid=823408266&range=A1:A25"
-                                                width="400px" height="560px" frameborder="0"></iframe>
+                                                src="https://docs.google.com/spreadsheets/d/1z9EzrgDIR11HGc7UFnRxZcqhC2xruSyXytict2eysYc/htmlembed/sheet?gid=823408266&range=A1:C24"
+                                                width="430px" height="560px" frameborder="0"></iframe>
                                             <button class="button is-small is-info refresh"
                                                 id="reload-checkworthy-claim">refresh</button>
+                                            <p class="help">Please click refresh if there is no output</p>
                                         </div>
 
                                         <!-- <iframe src="https://onedrive.live.com/embed?cid=BBC45CB5BFB6794E&amp;resid=BBC45CB5BFB6794E%21205936&amp;authkey=APB0OWKHPgHOOt8&amp;em=2" width="476px" height="288px" frameborder="0"></iframe> -->
@@ -256,8 +252,6 @@
                     <p><b>Description: </b> this idea aims to use an extractive summarization method to highlight
                         sentences from the article. These sentences are compressed into a list of summary brief and
                         considered to be part of a summary.</p>
-                    <p><b>Objective:</b> this idea aims to lead the discussion of how summarization helps to assist
-                        fact-checking across different separated tasks, such as fast-reading in claim investigation.</p>
                     <div class="image"><img src="image/Generate news article briefs for fast-reading.svg" alt=""></div>
                 </div>
                 <h3 class="title is-6">Prototype</h3>
@@ -272,8 +266,8 @@
                                     <div class="field-content">
                                         <p class="instructions">I would like to generate summary briefs from:
                                         </p>
-                                        <textarea class="textarea is-small" placeholder="Please paste one article URL or select one example
-                                            below"
+                                        <textarea class="textarea is-small"
+                                            placeholder="Please paste one article URL or select one example below"
                                             name="client's input"></textarea>
                                         <p class="instructions">Examples:</p>
                                         <a class="example">
@@ -311,7 +305,6 @@
                                             <button class="button analyze" type="submit">
                                                 Analyze
                                             </button>
-                                            <p class="help">Please click refresh if there is no output</p>
                                         </div>
                                     </div>
                                 </div>
@@ -333,6 +326,7 @@
                                                 width="400px" height="250px" frameborder="0"></iframe>
                                             <button class="button is-small is-info refresh"
                                                 id="reload-generate-article-briefs">refresh</button>
+                                            <p class="help">Please click refresh if there is no output</p>
                                         </div>
 
                                         <!-- <iframe src="https://onedrive.live.com/embed?cid=BBC45CB5BFB6794E&amp;resid=BBC45CB5BFB6794E%21205936&amp;authkey=APB0OWKHPgHOOt8&amp;em=2" width="476px" height="288px" frameborder="0"></iframe> -->
@@ -351,8 +345,6 @@
                     <h4 class="title is-5">4. Robocheck simple claims by searching evidence</h4>
                     <p><b>Description: </b>this idea aims to retrieve relevant articles according to a claim and
                         automatedly verify the claim based on stances of these retrieval articles.</p>
-                    <p><b>Objective: </b>this idea aims to lead the discussion of what kinds of claims are appropriate
-                        for machine to check and how fact-checkers review these robocheck results efficiently.</p>
                     <div class="image"><img src="image/Robocheck simple claims by searching evidence.svg" alt=""></div>
                 </div>
                 <h3 class="title is-6">Prototype</h3>
@@ -365,9 +357,11 @@
                                 </div>
                                 <div class="field-body">
                                     <div class="field-content">
-                                        <p class="instructions">I want the machine to search articles to check claims:
+                                        <p class="instructions">I want the machine to search articles to check the
+                                            following claims:
                                         </p>
-                                        <textarea class="textarea is-small" placeholder="Please enter one claim or select one example below"
+                                        <textarea class="textarea is-small"
+                                            placeholder="Please enter one claim or select one example below"
                                             name="client's input"></textarea>
                                         <p class="instructions">Examples:</p>
                                         <a class="example">
@@ -406,7 +400,6 @@
                                             <button class="button analyze" type="submit">
                                                 Analyze
                                             </button>
-                                            <p class="help">Please click refresh if there is no output</p>
                                         </div>
                                     </div>
                                 </div>
@@ -428,6 +421,7 @@
                                                 width="500px" height="350px" frameborder="0"></iframe>
                                             <button class="button is-small is-info refresh"
                                                 id="reload-robocheck">refresh</button>
+                                            <p class="help">Please click refresh if there is no output</p>
                                         </div>
 
                                         <!-- <iframe src="https://onedrive.live.com/embed?cid=BBC45CB5BFB6794E&amp;resid=BBC45CB5BFB6794E%21205936&amp;authkey=APB0OWKHPgHOOt8&amp;em=2" width="476px" height="288px" frameborder="0"></iframe> -->
