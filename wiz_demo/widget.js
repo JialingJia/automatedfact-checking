@@ -11,7 +11,13 @@
         // $('.addition').removeClass('is-hidden')
 
         // add new tasks and description into the output list
-        $('#existTask ol').append('<li>' + getNewTask + " " + getTaskContent + '</li>')
+        $('.nlpPlaceholder').addClass('is-hidden')
+
+        if (getTaskContent == ""){
+            $('#existTask ol').append('<li>' + getNewTask + " " + '<i>please describe your task outputs</i>' + '</li>')
+        } else {
+            $('#existTask ol').append('<li>' + getNewTask + " " + getTaskContent + '</li>')
+        }
 
         // clear input
         $('#newTaskContent').val("")
@@ -41,6 +47,7 @@
         // $('.incomplete .field-label label').removeClass('is-hidden') // display label
         // $('.incomplete .field-body .line').addClass('is-hidden') // remove line
         $('#existTask ol').empty() // empty existing tasks list
+        $('.nlpPlaceholder').removeClass('is-hidden')
     })
 
     $('.selectPrompts a').click(function () {
@@ -120,10 +127,16 @@
 
     // update input content on ouput
     $('.confirm').click(function () {
-        var inputContent = $('.textarea').val()
-        $('#inputContent').text(inputContent)
         var inputContentType = $('.content-type .select select').val()
         $('#inputContentType').text(inputContentType + ": ")
+
+        var inputContent = $('.textarea').val()
+        if (inputContent == "") {
+            $('#inputContent').text(`please specify your ${inputContentType}`)
+        }
+        else {
+            $('#inputContent').text(inputContent)
+        }
 
         $('.newControl input').val('')
     })
