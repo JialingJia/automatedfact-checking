@@ -53,7 +53,6 @@
                                 <option>Detect check-worthy claims on social media</option>
                                 <option>Generate briefs to assist fact-checking</option>
                                 <option>Robocheck simple claims</option>
-                                <option>Decontextualize claims</option>
                                 <option>Investigate claim's ambiguity</option>
                                 <option>Fast-check quantitative claims</option>
                                 <option>Evaluate fact-check report</option>
@@ -174,14 +173,20 @@
                                 </div>
                                 <div class="field-body">
                                     <div class="field-content task" id="existTask">
-                                        <p> You start analyzing 
+                                        <div class="message is-success is-small is-hidden" id="sucessMessage">
+                                            <div class="message-body">
+                                                Thank you, we have received your idea. Try another one?.
+                                            </div>
+                                        </div>
+                                        <p> You start analyzing
                                             <b id='inputContentType'>keywords:</b>
                                         </p>
                                         <p>
                                             <i id='inputContent'>please specify your keywords</i>
                                         </p>
                                         <p>
-                                            to <b id="designPrompts"> detect checkable claims </b> by using following NLP:
+                                            to <b id="designPrompts"> detect checkable claims </b> by using following
+                                            NLP:
                                         </p>
                                         <p class="nlpPlaceholder">
                                             <i> Your nlp tasks will display here </i>
@@ -197,7 +202,7 @@
                                 <div class="field-body">
                                     <div class="field-content">
                                         <div class="control">
-                                            <button class="button is-info is-small" type="button">
+                                            <button class="button is-info is-small" type="button" id="submitIdea">
                                                 Submit ideas
                                             </button>
                                         </div>
@@ -211,7 +216,11 @@
                                         <!-- <p>If you want to add more NLP tasks or reset your tasks, please choose:</p>
                                         <p><a class="addNewControl"><i class="fas fa-plus-circle"></i> add new
                                                 controls</a></p> -->
-                                        <p><a class="resetTask"><i class="fas fa-redo-alt"></i> reset tasks</a></p>
+                                        <p>
+                                            <a class="deleteLastTask"><i class="fas fa-trash-alt"></i> delete the last
+                                                task</a>
+                                            <a class="resetTask"><i class="fas fa-redo-alt"></i> reset tasks</a>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
