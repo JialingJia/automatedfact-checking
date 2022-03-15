@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Co-design NLP automated fact-checking</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section class="top">
+        <div class="line"></div>
+        <div class="container">
+            <div class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-brand brand" href="home.html">
+                        <p>Co-design NLP for automated fact-checking</p>
+                    </a>
+                </div>
+                <div class="navbar-end">
+                    <a class="navbar-item" target="_blank" href="https://drive.google.com/file/d/1osGiNTI0WB69wU52ndReJRP5Kes5h2Gi/view?usp=sharing"><br />Additional materials</a>
+                </div>
+            </div>
+            <div class="desc">
+                <p>Inspired by existing research papers that have applied natural language processing (NLP) to assist
+                    human fact-checking, we present following ideas. Each idea is displayed with a text-based diagram
+                    and a real-time prototype. Please read the diagram description to understand the basic components 
+                    of an NLP idea and explore the prototype to make sense of its implementations.</p>
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="content">
+            <!-- detect checkable claims -->
+            <div class="idea">
+                <div class="idea-top">
+                    <h4 class="title is-5">1. Detect checkable claims</h4>
+                    <div class="image"><img src="image/Detect checkable claims@2x.png" alt=""></div>
+                </div>
+                <h3 class="title is-6">Prototype</h3>
+                <div class="columns">
+                    <div class="column is-half">
+                        <form class="wiz" name="detect-checkable-claims">
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Input</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content">
+                                        <p class="instructions">I would like to find checkable claims from:</p>
+                                        <textarea class="textarea is-small"
+                                            placeholder="Please enter paragraphs or select one example below"
+                                            name="client's input"></textarea>
+                                        <p class="instructions">Examples:</p>
+                                        <a class="example">
+                                            <p>"We told you this week how if Mubarak does step down,
+                                                however, the Muslim
+                                                Brotherhood would be the most likely group to seize power. They’ve
+                                                openly
+                                                stated they want to declare war on Israel and they would end the peace
+                                                agreement with Israel and they would work towards instituting something
+                                                we
+                                                told you about, a caliphate."</p>
+                                        </a>
+                                        <a class="example">
+                                            <p>"Austria is expecting to declare nationwide lockdown of
+                                                unvaccinated people,
+                                                in what would be the broadest restrictions that any country has yet
+                                                placed
+                                                on those who have opted not to get the jab."</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">NLP tasks</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content task">
+                                        <ol>
+                                            <li>Classify claims' category</li>
+                                            <li>Identify checkable claims</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content">
+                                        <div class="control">
+                                            <button class="button analyze" type="submit">
+                                                Analyze
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="column is-half">
+                        <div class="wiz">
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Output</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content">
+                                        <div class="prototype">
+                                            <iframe id="iframe-checkable-claim"
+                                                src="https://docs.google.com/spreadsheets/d/1z9EzrgDIR11HGc7UFnRxZcqhC2xruSyXytict2eysYc/htmlembed/sheet?gid=0&range=A1:B15"
+                                                width="500px" height="330px" frameborder="0"></iframe>
+                                            <button class="button is-small is-info refresh"
+                                                id="reload-checkable-claim">refresh</button>
+                                            <p class="help">Please click refresh if there is no output</p>
+                                        </div>
+
+                                        <!-- <iframe src="https://onedrive.live.com/embed?cid=BBC45CB5BFB6794E&amp;resid=BBC45CB5BFB6794E%21205936&amp;authkey=APB0OWKHPgHOOt8&amp;em=2" width="476px" height="288px" frameborder="0"></iframe> -->
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- detect check-worthy claims -->
+            <div class="idea">
+                <div class="idea-top">
+                    <h4 class="title is-5">2. Detect check-worthy claims on social media</h4>
+                    <div class="image"><img src="image/Detect check-worthy claims on social media@2x.png" alt=""></div>
+                </div>
+                <h3 class="title is-6">Prototype</h3>
+                <div class="columns">
+                    <div class="column is-half">
+                        <form class="wiz" name="detect-checkworthy-claims">
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Input</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content">
+                                        <p class="instructions">I would like to detect if the following tweet is
+                                            checkworthy:
+                                        </p>
+                                        <textarea class="textarea is-small"
+                                            placeholder="Please paste one tweet URL or select one example below"
+                                            name="client's input"></textarea>
+                                        <p class="instructions">Examples:</p>
+                                        <a class="example">
+                                            <p>https://twitter.com/btc_sd/status/1460667643921408006 <br>
+                                                "No economist out there is projecting that this (injecting another
+                                                $1.75T) will have a negative impact on inflation."</p>
+                                        </a>
+                                        <a class="example">
+                                            <p>https://twitter.com/btc_sd/status/1460667643921408006 <br>
+                                                "Politicians around the world are denying that their actions are
+                                                devaluing the currencies. They aren't going to stop until it's far too
+                                                late. Protect yourself and buy some Bitcoin."</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">NLP tasks</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content task">
+                                        <ol>
+                                            <li>Classify if the tweet contains checkable claims</li>
+                                            <li>Identify sentiments, political ideology, and stances of tweet's comments</li>
+                                            <li>Identify tweet's virality and susceptibility</li>
+                                            <li>Use previous information to classify if the tweet is check-worthy</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content">
+                                        <div class="control">
+                                            <button class="button analyze" type="submit">
+                                                Analyze
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="column is-half">
+                        <div class="wiz">
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Output</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content">
+                                        <div class="prototype">
+                                            <iframe id="iframe-checkworthy-claim"
+                                                src="https://docs.google.com/spreadsheets/d/1z9EzrgDIR11HGc7UFnRxZcqhC2xruSyXytict2eysYc/htmlembed/sheet?gid=823408266&range=A1:C24"
+                                                width="430px" height="560px" frameborder="0"></iframe>
+                                            <button class="button is-small is-info refresh"
+                                                id="reload-checkworthy-claim">refresh</button>
+                                            <p class="help">Please click refresh if there is no output</p>
+                                        </div>
+
+                                        <!-- <iframe src="https://onedrive.live.com/embed?cid=BBC45CB5BFB6794E&amp;resid=BBC45CB5BFB6794E%21205936&amp;authkey=APB0OWKHPgHOOt8&amp;em=2" width="476px" height="288px" frameborder="0"></iframe> -->
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- prepare stand-alone claims -->
+            <div class="idea">
+                <div class="idea-top">
+                    <h4 class="title is-5">3. Prepare stand-alone claims before fact-checking</h4>
+                    <div class="image"><img src="image/Prepare stand-alone claims@2x.png" alt="">
+                    </div>
+                </div>
+                <h3 class="title is-6">Prototype</h3>
+                <div class="columns">
+                    <div class="column is-half">
+                        <form class="wiz" name="prepare-stand-alone-claims">
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Input</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content">
+                                        <p class="instructions">I want to create stand-alone claims from:
+                                        </p>
+                                        <textarea class="textarea is-small"
+                                            placeholder="Please enter one paragraph or select one examples below"
+                                            name="client's input"></textarea>
+                                        <p class="instructions">Examples:</p>
+                                        <a class="example">
+                                            <p>"We told you this week how if Mubarak does step down,
+                                                however, the Muslim
+                                                Brotherhood would be the most likely group to seize power. They've
+                                                openly
+                                                stated they want to declare war on Israel and they would end the peace
+                                                agreement with Israel and they would work towards instituting something
+                                                we
+                                                told you about, a caliphate."</p>
+                                        </a>
+                                        <a class="example">
+                                            <p>"Austria is expecting to declare nationwide lockdown of
+                                                unvaccinated people,
+                                                in what would be the broadest restrictions that any country has yet
+                                                placed
+                                                on those who have opted not to get the jab."</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">NLP tasks</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content task">
+                                        <ol>
+                                            <li>Detect checkable claims</li>
+                                            <li>Create stand-alone claims by replacing pronouns, removing discourse
+                                                markers, and adding local conditions</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content">
+                                        <div class="control">
+                                            <button class="button analyze" type="submit">
+                                                Analyze
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="column is-half">
+                        <div class="wiz">
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Output</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content">
+                                        <div class="prototype">
+                                            <iframe id="iframe-stand-alone-claims"
+                                                src="https://docs.google.com/spreadsheets/d/1z9EzrgDIR11HGc7UFnRxZcqhC2xruSyXytict2eysYc/htmlembed/sheet?gid=908623667&range=A1:A10"
+                                                width="500px" height="330px" frameborder="0"></iframe>
+                                            <button class="button is-small is-info refresh"
+                                                id="reload-stand-alone-claims">refresh</button>
+                                            <p class="help">Please click refresh if there is no output</p>
+                                        </div>
+
+                                        <!-- <iframe src="https://onedrive.live.com/embed?cid=BBC45CB5BFB6794E&amp;resid=BBC45CB5BFB6794E%21205936&amp;authkey=APB0OWKHPgHOOt8&amp;em=2" width="476px" height="288px" frameborder="0"></iframe> -->
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- identify ambiguous terms -->
+            <div class="idea">
+                <div class="idea-top">
+                    <h4 class="title is-5">4. Identify ambiguous terms in a claim</h4>
+                    <div class="image"><img src="image/Detect ambiguous terms@2x.png" alt=""></div>
+                </div>
+                <h3 class="title is-6">Prototype</h3>
+                <div class="columns">
+                    <div class="column is-half">
+                        <form class="wiz" name="ambiguous-terms">
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Input</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content">
+                                        <p class="instructions">I want to investigate ambiguous terms from:</p>
+                                        <textarea class="textarea is-small"
+                                            placeholder="Please enter paragraphs or select one example below"
+                                            name="client's input"></textarea>
+                                        <p class="instructions">Examples:</p>
+                                        <a class="example">
+                                            <p>"People in the Muslim Brotherhood openly stated they want to declare
+                                                war
+                                                on Israel and they would end the peace agreement with Israel and
+                                                they
+                                                would work towards instituting something we told you about, a
+                                                caliphate."
+                                            </p>
+                                        </a>
+                                        <a class="example">
+                                            <p>"Austria is expecting to declare nationwide lockdown of
+                                                unvaccinated people,
+                                                in what would be the broadest restrictions that any country has yet
+                                                placed
+                                                on those who have opted not to get the jab."</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">NLP tasks</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content task">
+                                        <ol>
+                                            <li>Highlight ambiguous terms</li>
+                                            <li>Generate contextual questions from these terms</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content">
+                                        <div class="control">
+                                            <button class="button analyze" type="submit">
+                                                Analyze
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="column is-half">
+                        <div class="wiz">
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Output</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content">
+                                        <div class="prototype">
+                                            <iframe id="iframe-ambiguous-terms"
+                                                src="https://docs.google.com/spreadsheets/d/1z9EzrgDIR11HGc7UFnRxZcqhC2xruSyXytict2eysYc/htmlembed/sheet?gid=329672307&range=A1:A10"
+                                                width="500px" height="330px" frameborder="0"></iframe>
+                                            <button class="button is-small is-info refresh"
+                                                id="reload-ambiguous-terms">refresh</button>
+                                            <p class="help">Please click refresh if there is no output</p>
+                                        </div>
+
+                                        <!-- <iframe src="https://onedrive.live.com/embed?cid=BBC45CB5BFB6794E&amp;resid=BBC45CB5BFB6794E%21205936&amp;authkey=APB0OWKHPgHOOt8&amp;em=2" width="476px" height="288px" frameborder="0"></iframe> -->
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- generate article briefs -->
+            <div class="idea">
+                <div class="idea-top">
+                    <h4 class="title is-5">5. Generate news article briefs</h4>
+                    <!-- <p><b>Description: </b> this idea aims to use an extractive summarization method to highlight
+                        sentences from the article. These sentences are compressed into a list of summary brief and
+                        considered to be part of a summary.</p> -->
+                    <div class="image"><img src="image/Generate news article briefs@2x.png" alt=""></div>
+                </div>
+                <h3 class="title is-6">Prototype</h3>
+                <div class="columns">
+                    <div class="column is-half">
+                        <form class="wiz" name="generate-article-briefs">
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Input</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content">
+                                        <p class="instructions">I would like to generate summary briefs from:
+                                        </p>
+                                        <textarea class="textarea is-small"
+                                            placeholder="Please paste one article URL or select one example below"
+                                            name="client's input"></textarea>
+                                        <p class="instructions">Examples:</p>
+                                        <a class="example">
+                                            <p>https://www.cbsnews.com/news/inflation-infrastructure-build-back-better-biden-spending-bills/
+                                                <br>
+                                                "Biden's Build Back Better Act would have muted impact on inflation,
+                                                Moody's says"</p>
+                                        </a>
+                                        <a class="example">
+                                            <p>https://www.nytimes.com/2021/11/15/business/dealbook/infrastructure-inflation-social-spending.html
+                                                <br>
+                                                "Inflation will make or break the next spending bill"</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">NLP tasks</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content task">
+                                        <ol>
+                                            <li>Generate a summary brief for the article</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content">
+                                        <div class="control">
+                                            <button class="button analyze" type="submit">
+                                                Analyze
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="column is-half">
+                        <div class="wiz">
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Output</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content">
+                                        <div class="prototype">
+                                            <iframe id="iframe-generate-article-briefs"
+                                                src="https://docs.google.com/spreadsheets/d/1z9EzrgDIR11HGc7UFnRxZcqhC2xruSyXytict2eysYc/htmlembed/sheet?gid=1594202430&range=A1:A3"
+                                                width="400px" height="350px" frameborder="0"></iframe>
+                                            <button class="button is-small is-info refresh"
+                                                id="reload-generate-article-briefs">refresh</button>
+                                            <p class="help">Please click refresh if there is no output</p>
+                                        </div>
+
+                                        <!-- <iframe src="https://onedrive.live.com/embed?cid=BBC45CB5BFB6794E&amp;resid=BBC45CB5BFB6794E%21205936&amp;authkey=APB0OWKHPgHOOt8&amp;em=2" width="476px" height="288px" frameborder="0"></iframe> -->
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- retrieve quantitative information -->
+            <div class="idea">
+                <div class="idea-top">
+                    <h4 class="title is-5">6. Retrieve quantitative related information from analytical queries</h4>
+                    <div class="image"><img src="image/Retrieve quantitative information@2x.png" alt=""></div>
+                </div>
+                <h3 class="title is-6">Prototype</h3>
+                <div class="columns">
+                    <div class="column is-half">
+                        <form class="wiz" name="quantitative-information">
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Input</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content">
+                                        <p class="instructions">I want to find quantitative information with search
+                                            input:</p>
+                                        <textarea class="textarea is-small"
+                                            placeholder="Please enter a sentence that contains analytical keywords such as space and time, or select one example below"
+                                            name="client's input"></textarea>
+                                        <p class="instructions">Examples:</p>
+                                        <a class="example">
+                                            <p>How many total covid cases India have reported from April 7th to
+                                                April
+                                                9th</p>
+                                        </a>
+                                        <a class="example">
+                                            <p>GDP of China in recent 3 years</p>
+                                        </a>
+                                        <a class="example">
+                                            <p>Monthly income for people living in Florida</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">NLP tasks</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content task">
+                                        <ol>
+                                            <li>Detect analytical keywords from the search query, including time,
+                                                space, and search objects</li>
+                                            <li>Retrieve quantitative relevant information</li>
+                                            <li>Generate a final summary from previous answers</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content">
+                                        <div class="control">
+                                            <button class="button analyze" type="submit">
+                                                Analyze
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="column is-half">
+                        <div class="wiz">
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Output</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content">
+                                        <div class="prototype">
+                                            <iframe id="iframe-quantitative-information"
+                                                src="https://docs.google.com/spreadsheets/d/1z9EzrgDIR11HGc7UFnRxZcqhC2xruSyXytict2eysYc/htmlembed/sheet?gid=1730654240&range=A1:C10"
+                                                width="500px" height="330px" frameborder="0"></iframe>
+                                            <button class="button is-small is-info refresh"
+                                                id="reload-quantitative-information">refresh</button>
+                                            <p class="help">Please click refresh if there is no output</p>
+                                        </div>
+
+                                        <!-- <iframe src="https://onedrive.live.com/embed?cid=BBC45CB5BFB6794E&amp;resid=BBC45CB5BFB6794E%21205936&amp;authkey=APB0OWKHPgHOOt8&amp;em=2" width="476px" height="288px" frameborder="0"></iframe> -->
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- robocheck -->
+            <div class="idea">
+                <div class="idea-top">
+                    <h4 class="title is-5">7. Robocheck simple claims by searching evidence</h4>
+                    <div class="image"><img src="image/Robocheck@2x.png" alt=""></div>
+                </div>
+                <h3 class="title is-6">Prototype</h3>
+                <div class="columns">
+                    <div class="column is-half">
+                        <form class="wiz" name="robocheck">
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Input</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content">
+                                        <p class="instructions">I want the machine to search articles to check the
+                                            following claims:
+                                        </p>
+                                        <textarea class="textarea is-small"
+                                            placeholder="Please enter one claim or select one example below"
+                                            name="client's input"></textarea>
+                                        <p class="instructions">Examples:</p>
+                                        <a class="example">
+                                            <p>The Biden administration “is spending $30 million on crack pipes.</p>
+                                        </a>
+                                        <a class="example">
+                                            <p>In England, official data shows children are up to 52 times more likely to die following COVID-19 vaccination than unvaccinated children.</p>
+                                        </a>
+                                        <a class="example">
+                                            <p>Joe Biden uses the ATF to illegally track your gun transactions.</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">NLP tasks</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content task">
+                                        <ol>
+                                            <li>Retrieve relevant articles</li>
+                                            <li>Verify claim based on article stances</li>
+                                            <li>highlight evidences from articles</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content">
+                                        <div class="control">
+                                            <button class="button analyze" type="submit">
+                                                Analyze
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="column is-half">
+                        <div class="wiz">
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Output</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content">
+                                        <div class="prototype">
+                                            <iframe id="iframe-robocheck"
+                                                src="https://docs.google.com/spreadsheets/d/1z9EzrgDIR11HGc7UFnRxZcqhC2xruSyXytict2eysYc/htmlembed/sheet?gid=683514345&range=A1:C7"
+                                                width="500px" height="350px" frameborder="0"></iframe>
+                                            <button class="button is-small is-info refresh"
+                                                id="reload-robocheck">refresh</button>
+                                            <p class="help">Please click refresh if there is no output</p>
+                                        </div>
+
+                                        <!-- <iframe src="https://onedrive.live.com/embed?cid=BBC45CB5BFB6794E&amp;resid=BBC45CB5BFB6794E%21205936&amp;authkey=APB0OWKHPgHOOt8&amp;em=2" width="476px" height="288px" frameborder="0"></iframe> -->
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- review argumentation quality of a fact check -->
+            <div class="idea">
+                <div class="idea-top">
+                    <h4 class="title is-5">8. Review argumentation quality of a fact-check</h4>
+                    <div class="image"><img src="image/Review the quality of argumentations@2x.png" alt="">
+                    </div>
+                </div>
+                <h3 class="title is-6">Prototype</h3>
+                <div class="columns">
+                    <div class="column is-half">
+                        <form class="wiz" name="review-argumentation">
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Input</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content">
+                                        <p class="instructions">I want to understand the argumentation quality for
+                                            this fact-check:</p>
+                                        <textarea class="textarea is-small"
+                                            placeholder="Please enter one paragraph or select one from the fact-check below"
+                                            name="client's input"></textarea>
+                                        <p class="instructions">Example:</p>
+                                        <p class="example" style="color: black;">Claim: In Joe Biden’s America, your
+                                            children are more likely to have access to a crack pipe than a mask-free
+                                            education.</p>
+                                        <a class="example">
+                                            <p>The claim alludes to a Biden administration anti-drug abuse program.
+                                                Grant money from the program can be used for a variety of efforts,
+                                                including providing safe-smoking kits, which are intended to reduce
+                                                disease among illegal drug users that is caused by the sharing of
+                                                smoking materials. We found no evidence the kits are aimed at
+                                                children.<br>
+                                                Federal officials said the funds cannot be used to provide pipes.
+                                                <br>
+                                                There is no federal mandate requiring children to wear masks in
+                                                schools. Within the next several weeks, fewer than a dozen states
+                                                will have such mandates as part of their efforts to fight COVID-19.
+                                            </p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">NLP tasks</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content task">
+                                        <ol>
+                                            <li>Set up</li>
+                                            <li>Highlight claims and premises</li>
+                                            <li>Score readability, coherency, and persuasiveness</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content">
+                                        <div class="control">
+                                            <button class="button analyze" type="submit">
+                                                Analyze
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="column is-half">
+                        <div class="wiz">
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Output</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content">
+                                        <div class="prototype">
+                                            <iframe id="iframe-review-argumentation"
+                                                src="https://docs.google.com/spreadsheets/d/1z9EzrgDIR11HGc7UFnRxZcqhC2xruSyXytict2eysYc/htmlembed/sheet?gid=1852770638&range=A1:B8"
+                                                width="520px" height="400px" frameborder="0"></iframe>
+                                            <button class="button is-small is-info refresh"
+                                                id="reload-review-argumentation">refresh</button>
+                                            <p class="help">Please click refresh if there is no output</p>
+                                        </div>
+
+                                        <!-- <iframe src="https://onedrive.live.com/embed?cid=BBC45CB5BFB6794E&amp;resid=BBC45CB5BFB6794E%21205936&amp;authkey=APB0OWKHPgHOOt8&amp;em=2" width="476px" height="288px" frameborder="0"></iframe> -->
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>This is a research prototype, only used for the workshop of co-designing NLP solutions to assist human
+                fact-checkers. Designed by Houjiang Liu. <br> This webpage is under a <a
+                    href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA license</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+<script src="script.js"></script>
+
+</html>

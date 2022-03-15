@@ -26,7 +26,7 @@
                 <div class="navbar-end">
                     <a class="navbar-item" href="PartA.html"><br />PART A</a>
                     <a class="navbar-item navbar-item-active" href="PartB.html"><br />PART B</a>
-                    <a class="navbar-item" href="widget.html"><br />Toolkit</a>
+                    <!-- <a class="navbar-item" href="widget.html"><br />Toolkit</a> -->
                 </div>
             </div>
             <div class="desc">
@@ -142,308 +142,310 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <!-- ambiguous terms -->
+            <div class="idea">
+                <div class="idea-top">
+                    <h4 class="title is-5">2. Help fact-checkers investigate ambiguous terms in a claim</h4>
+                    <p><b>Description:</b> this idea aims to detect ambiguous terms in a claim and help
+                        fact-checkers
+                        generate contextual questions for further investigations based on these terms.</p>
+                    <div class="image"><img src="image/Help fact-checkers investigate ambiguous terms in a claim.svg"
+                            alt=""></div>
                 </div>
-                <!-- ambiguous terms -->
-                <div class="idea">
-                    <div class="idea-top">
-                        <h4 class="title is-5">2. Help fact-checkers investigate ambiguous terms in a claim</h4>
-                        <p><b>Description:</b> this idea aims to detect ambiguous terms in a claim and help
-                            fact-checkers
-                            generate contextual questions for further investigations based on these terms.</p>
-                        <div class="image"><img
-                                src="image/Help fact-checkers investigate ambiguous terms in a claim.svg" alt=""></div>
-                    </div>
-                    <h3 class="title is-6">Prototype</h3>
-                    <div class="columns">
-                        <div class="column is-half">
-                            <form class="wiz" name="ambiguous-terms">
-                                <div class="field is-horizontal">
-                                    <div class="field-label is-normal">
-                                        <label class="label">Input</label>
-                                    </div>
-                                    <div class="field-body">
-                                        <div class="field-content">
-                                            <p class="instructions">I want to investigate ambiguous terms from:</p>
-                                            <textarea class="textarea is-small"
-                                                placeholder="Please enter paragraphs or select one example below"
-                                                name="client's input"></textarea>
-                                            <p class="instructions">Examples:</p>
-                                            <a class="example">
-                                                <p>"People in the Muslim Brotherhood openly stated they want to declare
-                                                    war
-                                                    on Israel and they would end the peace agreement with Israel and
-                                                    they
-                                                    would work towards instituting something we told you about, a
-                                                    caliphate."
-                                                </p>
-                                            </a>
-                                            <a class="example">
-                                                <p>"Austria is expecting to declare nationwide lockdown of
-                                                    unvaccinated people,
-                                                    in what would be the broadest restrictions that any country has yet
-                                                    placed
-                                                    on those who have opted not to get the jab."</p>
-                                            </a>
-                                        </div>
+                <h3 class="title is-6">Prototype</h3>
+                <div class="columns">
+                    <div class="column is-half">
+                        <form class="wiz" name="ambiguous-terms">
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Input</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content">
+                                        <p class="instructions">I want to investigate ambiguous terms from:</p>
+                                        <textarea class="textarea is-small"
+                                            placeholder="Please enter paragraphs or select one example below"
+                                            name="client's input"></textarea>
+                                        <p class="instructions">Examples:</p>
+                                        <a class="example">
+                                            <p>"People in the Muslim Brotherhood openly stated they want to declare
+                                                war
+                                                on Israel and they would end the peace agreement with Israel and
+                                                they
+                                                would work towards instituting something we told you about, a
+                                                caliphate."
+                                            </p>
+                                        </a>
+                                        <a class="example">
+                                            <p>"Austria is expecting to declare nationwide lockdown of
+                                                unvaccinated people,
+                                                in what would be the broadest restrictions that any country has yet
+                                                placed
+                                                on those who have opted not to get the jab."</p>
+                                        </a>
                                     </div>
                                 </div>
-                                <div class="field is-horizontal">
-                                    <div class="field-label is-normal">
-                                        <label class="label">NLP tasks</label>
-                                    </div>
-                                    <div class="field-body">
-                                        <div class="field-content task">
-                                            <ol>
-                                                <li>Highlight ambiguous terms</li>
-                                                <li>Generate contextual questions from these terms</li>
-                                            </ol>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="field is-horizontal">
-                                    <div class="field-label is-normal">
-                                    </div>
-                                    <div class="field-body">
-                                        <div class="field-content">
-                                            <div class="control">
-                                                <button class="button analyze" type="submit">
-                                                    Analyze
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </form>
-                        </div>
-                        <div class="column is-half">
-                            <div class="wiz">
-                                <div class="field is-horizontal">
-                                    <div class="field-label is-normal">
-                                        <label class="label">Output</label>
-                                    </div>
-                                    <div class="field-body">
-                                        <div class="field-content">
-                                            <div class="prototype">
-                                                <iframe id="iframe-ambiguous-terms"
-                                                    src="https://docs.google.com/spreadsheets/d/1z9EzrgDIR11HGc7UFnRxZcqhC2xruSyXytict2eysYc/htmlembed/sheet?gid=329672307&range=A1:A10"
-                                                    width="500px" height="330px" frameborder="0"></iframe>
-                                                <button class="button is-small is-info refresh"
-                                                    id="reload-ambiguous-terms">refresh</button>
-                                                <p class="help">Please click refresh if there is no output</p>
-                                            </div>
-
-                                            <!-- <iframe src="https://onedrive.live.com/embed?cid=BBC45CB5BFB6794E&amp;resid=BBC45CB5BFB6794E%21205936&amp;authkey=APB0OWKHPgHOOt8&amp;em=2" width="476px" height="288px" frameborder="0"></iframe> -->
-
-                                        </div>
-                                    </div>
-                                </div>
-
                             </div>
-                        </div>
-                    </div>
-                    <p><a class="more" target="_blank" href="https://drive.google.com/file/d/1osGiNTI0WB69wU52ndReJRP5Kes5h2Gi/view?usp=sharing">click to see more materials</a></p>
-                </div>
-                <!-- retrieve quantitative information -->
-                <div class="idea">
-                    <div class="idea-top">
-                        <h4 class="title is-5">3. Retrieve quantitative related information from analytical queries</h4>
-                        <p><b>Description:</b> this idea aims to help fact-checkers search quantitative related
-                            information including place, time, and statistics. It generates final answers from these
-                            quantitative information.</p>
-                        <div class="image"><img src="image/Retrieve quantitative related information.svg" alt=""></div>
-                    </div>
-                    <h3 class="title is-6">Prototype</h3>
-                    <div class="columns">
-                        <div class="column is-half">
-                            <form class="wiz" name="quantitative-information">
-                                <div class="field is-horizontal">
-                                    <div class="field-label is-normal">
-                                        <label class="label">Input</label>
-                                    </div>
-                                    <div class="field-body">
-                                        <div class="field-content">
-                                            <p class="instructions">I want to find quantitative information with search
-                                                input:</p>
-                                            <textarea class="textarea is-small"
-                                                placeholder="Please enter a sentence that contains analytical keywords such as space and time, or select one example below"
-                                                name="client's input"></textarea>
-                                            <p class="instructions">Examples:</p>
-                                            <a class="example">
-                                                <p>How many total covid cases India have reported from April 7th to
-                                                    April
-                                                    9th</p>
-                                            </a>
-                                            <a class="example">
-                                                <p>GDP of China in recent 3 years</p>
-                                            </a>
-                                            <a class="example">
-                                                <p>Monthly income for people living in Florida</p>
-                                            </a>
-                                        </div>
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">NLP tasks</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content task">
+                                        <ol>
+                                            <li>Highlight ambiguous terms</li>
+                                            <li>Generate contextual questions from these terms</li>
+                                        </ol>
                                     </div>
                                 </div>
-                                <div class="field is-horizontal">
-                                    <div class="field-label is-normal">
-                                        <label class="label">NLP tasks</label>
-                                    </div>
-                                    <div class="field-body">
-                                        <div class="field-content task">
-                                            <ol>
-                                                <li>Detect analytical keywords from the search query, including time,
-                                                    space, and search objects</li>
-                                                <li>Retrieve quantitative relevant information</li>
-                                                <li>Generate final answers from retrieval information</li>
-                                            </ol>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="field is-horizontal">
-                                    <div class="field-label is-normal">
-                                    </div>
-                                    <div class="field-body">
-                                        <div class="field-content">
-                                            <div class="control">
-                                                <button class="button analyze" type="submit">
-                                                    Analyze
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </form>
-                        </div>
-                        <div class="column is-half">
-                            <div class="wiz">
-                                <div class="field is-horizontal">
-                                    <div class="field-label is-normal">
-                                        <label class="label">Output</label>
-                                    </div>
-                                    <div class="field-body">
-                                        <div class="field-content">
-                                            <div class="prototype">
-                                                <iframe id="iframe-quantitative-information"
-                                                    src="https://docs.google.com/spreadsheets/d/1z9EzrgDIR11HGc7UFnRxZcqhC2xruSyXytict2eysYc/htmlembed/sheet?gid=1730654240&range=A1:C10"
-                                                    width="500px" height="330px" frameborder="0"></iframe>
-                                                <button class="button is-small is-info refresh"
-                                                    id="reload-quantitative-information">refresh</button>
-                                                <p class="help">Please click refresh if there is no output</p>
-                                            </div>
-
-                                            <!-- <iframe src="https://onedrive.live.com/embed?cid=BBC45CB5BFB6794E&amp;resid=BBC45CB5BFB6794E%21205936&amp;authkey=APB0OWKHPgHOOt8&amp;em=2" width="476px" height="288px" frameborder="0"></iframe> -->
-
-                                        </div>
-                                    </div>
-                                </div>
-
                             </div>
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content">
+                                        <div class="control">
+                                            <button class="button analyze" type="submit">
+                                                Analyze
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="column is-half">
+                        <div class="wiz">
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Output</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content">
+                                        <div class="prototype">
+                                            <iframe id="iframe-ambiguous-terms"
+                                                src="https://docs.google.com/spreadsheets/d/1z9EzrgDIR11HGc7UFnRxZcqhC2xruSyXytict2eysYc/htmlembed/sheet?gid=329672307&range=A1:A10"
+                                                width="500px" height="330px" frameborder="0"></iframe>
+                                            <button class="button is-small is-info refresh"
+                                                id="reload-ambiguous-terms">refresh</button>
+                                            <p class="help">Please click refresh if there is no output</p>
+                                        </div>
+
+                                        <!-- <iframe src="https://onedrive.live.com/embed?cid=BBC45CB5BFB6794E&amp;resid=BBC45CB5BFB6794E%21205936&amp;authkey=APB0OWKHPgHOOt8&amp;em=2" width="476px" height="288px" frameborder="0"></iframe> -->
+
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
-                <!-- review argumentation -->
-                <div class="idea">
-                    <div class="idea-top">
-                        <h4 class="title is-5">4. Review argumentation in the fact-checking report</h4>
-                        <p><b>Description:</b> this idea aims to assist fact-checkers to evaluate the argumentation in a
-                            fact-checking report from three perspectives, including readability, coherency, and
-                            persuasiveness.</p>
-                        <div class="image"><img src="image/Review argumentations in a fact-checking report.svg" alt="">
-                        </div>
-                    </div>
-                    <h3 class="title is-6">Prototype</h3>
-                    <div class="columns">
-                        <div class="column is-half">
-                            <form class="wiz" name="review-argumentation">
-                                <div class="field is-horizontal">
-                                    <div class="field-label is-normal">
-                                        <label class="label">Input</label>
-                                    </div>
-                                    <div class="field-body">
-                                        <div class="field-content">
-                                            <p class="instructions">I want to understand the argumentation quality for
-                                                this fact-check:</p>
-                                            <textarea class="textarea is-small"
-                                                placeholder="Please enter one paragraph or select one from the fact-check below"
-                                                name="client's input"></textarea>
-                                            <p class="instructions">Example:</p>
-                                            <p class="example" style="color: black;">Claim: In Joe Biden’s America, your
-                                                children are more likely to have access to a crack pipe than a mask-free
-                                                education.</p>
-                                            <a class="example">
-                                                <p>The claim alludes to a Biden administration anti-drug abuse program.
-                                                    Grant money from the program can be used for a variety of efforts,
-                                                    including providing safe-smoking kits, which are intended to reduce
-                                                    disease among illegal drug users that is caused by the sharing of
-                                                    smoking materials. We found no evidence the kits are aimed at
-                                                    children.<br>
-                                                    Federal officials said the funds cannot be used to provide pipes.
-                                                    <br>
-                                                    There is no federal mandate requiring children to wear masks in
-                                                    schools. Within the next several weeks, fewer than a dozen states
-                                                    will have such mandates as part of their efforts to fight COVID-19.
-                                                </p>
-                                            </a>
-                                        </div>
+                <p><a class="more" target="_blank"
+                        href="https://drive.google.com/file/d/1osGiNTI0WB69wU52ndReJRP5Kes5h2Gi/view?usp=sharing">click
+                        to see more materials</a></p>
+            </div>
+            <!-- retrieve quantitative information -->
+            <div class="idea">
+                <div class="idea-top">
+                    <h4 class="title is-5">3. Retrieve quantitative related information from analytical queries</h4>
+                    <p><b>Description:</b> this idea aims to help fact-checkers search quantitative related
+                        information including place, time, and statistics. It generates final answers from these
+                        quantitative information.</p>
+                    <div class="image"><img src="image/Retrieve quantitative related information.svg" alt=""></div>
+                </div>
+                <h3 class="title is-6">Prototype</h3>
+                <div class="columns">
+                    <div class="column is-half">
+                        <form class="wiz" name="quantitative-information">
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Input</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content">
+                                        <p class="instructions">I want to find quantitative information with search
+                                            input:</p>
+                                        <textarea class="textarea is-small"
+                                            placeholder="Please enter a sentence that contains analytical keywords such as space and time, or select one example below"
+                                            name="client's input"></textarea>
+                                        <p class="instructions">Examples:</p>
+                                        <a class="example">
+                                            <p>How many total covid cases India have reported from April 7th to
+                                                April
+                                                9th</p>
+                                        </a>
+                                        <a class="example">
+                                            <p>GDP of China in recent 3 years</p>
+                                        </a>
+                                        <a class="example">
+                                            <p>Monthly income for people living in Florida</p>
+                                        </a>
                                     </div>
                                 </div>
-                                <div class="field is-horizontal">
-                                    <div class="field-label is-normal">
-                                        <label class="label">NLP tasks</label>
-                                    </div>
-                                    <div class="field-body">
-                                        <div class="field-content task">
-                                            <ol>
-                                                <li>Highlight claims and premises</li>
-                                                <li>Score readability, coherency, and persuasiveness</li>
-                                            </ol>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="field is-horizontal">
-                                    <div class="field-label is-normal">
-                                    </div>
-                                    <div class="field-body">
-                                        <div class="field-content">
-                                            <div class="control">
-                                                <button class="button analyze" type="submit">
-                                                    Analyze
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </form>
-                        </div>
-                        <div class="column is-half">
-                            <div class="wiz">
-                                <div class="field is-horizontal">
-                                    <div class="field-label is-normal">
-                                        <label class="label">Output</label>
-                                    </div>
-                                    <div class="field-body">
-                                        <div class="field-content">
-                                            <div class="prototype">
-                                                <iframe id="iframe-review-argumentation"
-                                                    src="https://docs.google.com/spreadsheets/d/1z9EzrgDIR11HGc7UFnRxZcqhC2xruSyXytict2eysYc/htmlembed/sheet?gid=1852770638&range=A1:B8"
-                                                    width="520px" height="450px" frameborder="0"></iframe>
-                                                <button class="button is-small is-info refresh"
-                                                    id="reload-review-argumentation">refresh</button>
-                                                <p class="help">Please click refresh if there is no output</p>
-                                            </div>
-
-                                            <!-- <iframe src="https://onedrive.live.com/embed?cid=BBC45CB5BFB6794E&amp;resid=BBC45CB5BFB6794E%21205936&amp;authkey=APB0OWKHPgHOOt8&amp;em=2" width="476px" height="288px" frameborder="0"></iframe> -->
-
-                                        </div>
-                                    </div>
-                                </div>
-
                             </div>
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">NLP tasks</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content task">
+                                        <ol>
+                                            <li>Detect analytical keywords from the search query, including time,
+                                                space, and search objects</li>
+                                            <li>Retrieve quantitative relevant information</li>
+                                            <li>Generate final answers from retrieval information</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content">
+                                        <div class="control">
+                                            <button class="button analyze" type="submit">
+                                                Analyze
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="column is-half">
+                        <div class="wiz">
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Output</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content">
+                                        <div class="prototype">
+                                            <iframe id="iframe-quantitative-information"
+                                                src="https://docs.google.com/spreadsheets/d/1z9EzrgDIR11HGc7UFnRxZcqhC2xruSyXytict2eysYc/htmlembed/sheet?gid=1730654240&range=A1:C10"
+                                                width="500px" height="330px" frameborder="0"></iframe>
+                                            <button class="button is-small is-info refresh"
+                                                id="reload-quantitative-information">refresh</button>
+                                            <p class="help">Please click refresh if there is no output</p>
+                                        </div>
+
+                                        <!-- <iframe src="https://onedrive.live.com/embed?cid=BBC45CB5BFB6794E&amp;resid=BBC45CB5BFB6794E%21205936&amp;authkey=APB0OWKHPgHOOt8&amp;em=2" width="476px" height="288px" frameborder="0"></iframe> -->
+
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- review argumentation -->
+            <div class="idea">
+                <div class="idea-top">
+                    <h4 class="title is-5">4. Review argumentation in the fact-checking report</h4>
+                    <p><b>Description:</b> this idea aims to assist fact-checkers to evaluate the argumentation in a
+                        fact-checking report from three perspectives, including readability, coherency, and
+                        persuasiveness.</p>
+                    <div class="image"><img src="image/Review argumentations in a fact-checking report.svg" alt="">
+                    </div>
+                </div>
+                <h3 class="title is-6">Prototype</h3>
+                <div class="columns">
+                    <div class="column is-half">
+                        <form class="wiz" name="review-argumentation">
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Input</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content">
+                                        <p class="instructions">I want to understand the argumentation quality for
+                                            this fact-check:</p>
+                                        <textarea class="textarea is-small"
+                                            placeholder="Please enter one paragraph or select one from the fact-check below"
+                                            name="client's input"></textarea>
+                                        <p class="instructions">Example:</p>
+                                        <p class="example" style="color: black;">Claim: In Joe Biden’s America, your
+                                            children are more likely to have access to a crack pipe than a mask-free
+                                            education.</p>
+                                        <a class="example">
+                                            <p>The claim alludes to a Biden administration anti-drug abuse program.
+                                                Grant money from the program can be used for a variety of efforts,
+                                                including providing safe-smoking kits, which are intended to reduce
+                                                disease among illegal drug users that is caused by the sharing of
+                                                smoking materials. We found no evidence the kits are aimed at
+                                                children.<br>
+                                                Federal officials said the funds cannot be used to provide pipes.
+                                                <br>
+                                                There is no federal mandate requiring children to wear masks in
+                                                schools. Within the next several weeks, fewer than a dozen states
+                                                will have such mandates as part of their efforts to fight COVID-19.
+                                            </p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">NLP tasks</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content task">
+                                        <ol>
+                                            <li>Highlight claims and premises</li>
+                                            <li>Score readability, coherency, and persuasiveness</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content">
+                                        <div class="control">
+                                            <button class="button analyze" type="submit">
+                                                Analyze
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="column is-half">
+                        <div class="wiz">
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Output</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content">
+                                        <div class="prototype">
+                                            <iframe id="iframe-review-argumentation"
+                                                src="https://docs.google.com/spreadsheets/d/1z9EzrgDIR11HGc7UFnRxZcqhC2xruSyXytict2eysYc/htmlembed/sheet?gid=1852770638&range=A1:B8"
+                                                width="520px" height="450px" frameborder="0"></iframe>
+                                            <button class="button is-small is-info refresh"
+                                                id="reload-review-argumentation">refresh</button>
+                                            <p class="help">Please click refresh if there is no output</p>
+                                        </div>
+
+                                        <!-- <iframe src="https://onedrive.live.com/embed?cid=BBC45CB5BFB6794E&amp;resid=BBC45CB5BFB6794E%21205936&amp;authkey=APB0OWKHPgHOOt8&amp;em=2" width="476px" height="288px" frameborder="0"></iframe> -->
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer class="footer">
