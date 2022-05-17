@@ -39,6 +39,7 @@
     </section>
     <section class="container">
         <div class="content">
+            <div class="heading"><h1>Identify fact-checking related quality of claims<h1></div>
             <!-- detect checkable claims -->
             <div class="idea">
                 <div class="idea-top">
@@ -229,10 +230,111 @@
                     </div>
                 </div>
             </div>
+            <!-- review argumentation quality of a fact check -->
+            <div class="idea">
+                <div class="idea-top">
+                    <h4 class="title is-5">3. Review argumentation quality of a fact-check</h4>
+                    <div class="image"><img src="image/Review the quality of argumentations@2x.png" alt="">
+                    </div>
+                </div>
+                <h3 class="title is-6">Prototype</h3>
+                <div class="columns">
+                    <div class="column is-half">
+                        <form class="wiz" name="review-argumentation">
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Input</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content">
+                                        <p class="instructions">I want to understand the argumentation quality for
+                                            this fact-check:</p>
+                                        <textarea class="textarea is-small"
+                                            placeholder="Please enter one paragraph or select one from the fact-check below"
+                                            name="client's input"></textarea>
+                                        <p class="instructions">Example:</p>
+                                        <p class="example" style="color: black;">Claim: In Joe Biden’s America, your
+                                            children are more likely to have access to a crack pipe than a mask-free
+                                            education.</p>
+                                        <a class="example">
+                                            <p>The claim alludes to a Biden administration anti-drug abuse program.
+                                                Grant money from the program can be used for a variety of efforts,
+                                                including providing safe-smoking kits, which are intended to reduce
+                                                disease among illegal drug users that is caused by the sharing of
+                                                smoking materials. We found no evidence the kits are aimed at
+                                                children.<br>
+                                                Federal officials said the funds cannot be used to provide pipes.
+                                                <br>
+                                                There is no federal mandate requiring children to wear masks in
+                                                schools. Within the next several weeks, fewer than a dozen states
+                                                will have such mandates as part of their efforts to fight COVID-19.
+                                            </p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">NLP tasks</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content task">
+                                        <ol>
+                                            <li>Set up</li>
+                                            <li>Highlight claims and premises</li>
+                                            <li>Score readability, coherency, and persuasiveness</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content">
+                                        <div class="control">
+                                            <button class="button analyze" type="submit">
+                                                Analyze
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="column is-half">
+                        <div class="wiz">
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Output</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field-content">
+                                        <div class="prototype">
+                                            <iframe id="iframe-review-argumentation"
+                                                src="https://docs.google.com/spreadsheets/d/1z9EzrgDIR11HGc7UFnRxZcqhC2xruSyXytict2eysYc/htmlembed/sheet?gid=1852770638&range=A1:B8"
+                                                width="520px" height="400px" frameborder="0"></iframe>
+                                            <button class="button is-small is-info refresh"
+                                                id="reload-review-argumentation">refresh</button>
+                                            <p class="help">Please click refresh if there is no output</p>
+                                        </div>
+
+                                        <!-- <iframe src="https://onedrive.live.com/embed?cid=BBC45CB5BFB6794E&amp;resid=BBC45CB5BFB6794E%21205936&amp;authkey=APB0OWKHPgHOOt8&amp;em=2" width="476px" height="288px" frameborder="0"></iframe> -->
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="heading"><h1>Preparing claims in a format that is convenient for fact-checking<h1></div>
             <!-- prepare stand-alone claims -->
             <div class="idea">
                 <div class="idea-top">
-                    <h4 class="title is-5">3. Prepare stand-alone claims before fact-checking</h4>
+                    <h4 class="title is-5">4. Prepare stand-alone claims before fact-checking</h4>
                     <div class="image"><img src="image/Prepare stand-alone claims@2x.png" alt="">
                     </div>
                 </div>
@@ -326,7 +428,7 @@
             <!-- identify ambiguous terms -->
             <div class="idea">
                 <div class="idea-top">
-                    <h4 class="title is-5">4. Identify ambiguous terms in a claim</h4>
+                    <h4 class="title is-5">5. Identify ambiguous terms in a claim</h4>
                     <div class="image"><img src="image/Detect ambiguous terms@2x.png" alt=""></div>
                 </div>
                 <h3 class="title is-6">Prototype</h3>
@@ -415,10 +517,11 @@
                     </div>
                 </div>
             </div>
+            <div class="heading"><h1>Extract additional data in an accessible, effective form to help fact-checking<h1></div>
             <!-- generate article briefs -->
             <div class="idea">
                 <div class="idea-top">
-                    <h4 class="title is-5">5. Generate news article briefs</h4>
+                    <h4 class="title is-5">6. Summarzie related articles</h4>
                     <!-- <p><b>Description: </b> this idea aims to use an extractive summarization method to highlight
                         sentences from the article. These sentences are compressed into a list of summary brief and
                         considered to be part of a summary.</p> -->
@@ -512,7 +615,7 @@
             <!-- retrieve quantitative information -->
             <div class="idea">
                 <div class="idea-top">
-                    <h4 class="title is-5">6. Retrieve quantitative related information from analytical queries</h4>
+                    <h4 class="title is-5">7. Retrieve quantitative related information from analytical queries</h4>
                     <div class="image"><img src="image/Retrieve quantitative information@2x.png" alt=""></div>
                 </div>
                 <h3 class="title is-6">Prototype</h3>
@@ -598,10 +701,11 @@
                     </div>
                 </div>
             </div>
+            <div class="heading"><h1>Determine veracity of claims for just-in-time claim-checking<h1></div>
             <!-- robocheck -->
             <div class="idea">
                 <div class="idea-top">
-                    <h4 class="title is-5">7. Robocheck simple claims by searching evidence</h4>
+                    <h4 class="title is-5">8. Robocheck simple claims by searching evidence</h4>
                     <div class="image"><img src="image/Robocheck@2x.png" alt=""></div>
                 </div>
                 <h3 class="title is-6">Prototype</h3>
@@ -678,106 +782,6 @@
                                                 width="500px" height="350px" frameborder="0"></iframe>
                                             <button class="button is-small is-info refresh"
                                                 id="reload-robocheck">refresh</button>
-                                            <p class="help">Please click refresh if there is no output</p>
-                                        </div>
-
-                                        <!-- <iframe src="https://onedrive.live.com/embed?cid=BBC45CB5BFB6794E&amp;resid=BBC45CB5BFB6794E%21205936&amp;authkey=APB0OWKHPgHOOt8&amp;em=2" width="476px" height="288px" frameborder="0"></iframe> -->
-
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- review argumentation quality of a fact check -->
-            <div class="idea">
-                <div class="idea-top">
-                    <h4 class="title is-5">8. Review argumentation quality of a fact-check</h4>
-                    <div class="image"><img src="image/Review the quality of argumentations@2x.png" alt="">
-                    </div>
-                </div>
-                <h3 class="title is-6">Prototype</h3>
-                <div class="columns">
-                    <div class="column is-half">
-                        <form class="wiz" name="review-argumentation">
-                            <div class="field is-horizontal">
-                                <div class="field-label is-normal">
-                                    <label class="label">Input</label>
-                                </div>
-                                <div class="field-body">
-                                    <div class="field-content">
-                                        <p class="instructions">I want to understand the argumentation quality for
-                                            this fact-check:</p>
-                                        <textarea class="textarea is-small"
-                                            placeholder="Please enter one paragraph or select one from the fact-check below"
-                                            name="client's input"></textarea>
-                                        <p class="instructions">Example:</p>
-                                        <p class="example" style="color: black;">Claim: In Joe Biden’s America, your
-                                            children are more likely to have access to a crack pipe than a mask-free
-                                            education.</p>
-                                        <a class="example">
-                                            <p>The claim alludes to a Biden administration anti-drug abuse program.
-                                                Grant money from the program can be used for a variety of efforts,
-                                                including providing safe-smoking kits, which are intended to reduce
-                                                disease among illegal drug users that is caused by the sharing of
-                                                smoking materials. We found no evidence the kits are aimed at
-                                                children.<br>
-                                                Federal officials said the funds cannot be used to provide pipes.
-                                                <br>
-                                                There is no federal mandate requiring children to wear masks in
-                                                schools. Within the next several weeks, fewer than a dozen states
-                                                will have such mandates as part of their efforts to fight COVID-19.
-                                            </p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- <div class="field is-horizontal">
-                                <div class="field-label is-normal">
-                                    <label class="label">NLP tasks</label>
-                                </div>
-                                <div class="field-body">
-                                    <div class="field-content task">
-                                        <ol>
-                                            <li>Set up</li>
-                                            <li>Highlight claims and premises</li>
-                                            <li>Score readability, coherency, and persuasiveness</li>
-                                        </ol>
-                                    </div>
-                                </div>
-                            </div> -->
-                            <div class="field is-horizontal">
-                                <div class="field-label is-normal">
-                                </div>
-                                <div class="field-body">
-                                    <div class="field-content">
-                                        <div class="control">
-                                            <button class="button analyze" type="submit">
-                                                Analyze
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </form>
-                    </div>
-                    <div class="column is-half">
-                        <div class="wiz">
-                            <div class="field is-horizontal">
-                                <div class="field-label is-normal">
-                                    <label class="label">Output</label>
-                                </div>
-                                <div class="field-body">
-                                    <div class="field-content">
-                                        <div class="prototype">
-                                            <iframe id="iframe-review-argumentation"
-                                                src="https://docs.google.com/spreadsheets/d/1z9EzrgDIR11HGc7UFnRxZcqhC2xruSyXytict2eysYc/htmlembed/sheet?gid=1852770638&range=A1:B8"
-                                                width="520px" height="400px" frameborder="0"></iframe>
-                                            <button class="button is-small is-info refresh"
-                                                id="reload-review-argumentation">refresh</button>
                                             <p class="help">Please click refresh if there is no output</p>
                                         </div>
 
